@@ -1,0 +1,42 @@
+{
+    "subject": "Mathematics",
+    "code": "0580",
+    "topics": {
+        "1": {
+            "name": "Number",
+            "subtopics": [
+                "Integers",
+                "Fractions",
+                "Decimals",
+                "Percentages"
+            ]
+        },
+        "2": {
+            "name": "Algebra & Graphs",
+            "subtopics": [
+                "Linear equations",
+                "Quadratics",
+                "Inequalities",
+                "Graphs"
+            ]
+        },
+        "3": {
+            "name": "Coordinate Geometry",
+            "subtopics": [
+                "Distance",
+                "Midpoint",
+                "Gradient",
+                "Equations of lines"
+            ]
+        },
+        "4": {
+            "name": "Geometry",
+            "subtopics": [
+                "Angles",
+                "Triangles",
+                "Quadrilaterals",
+                "Circles"
+            ]
+        }
+    }
+}
