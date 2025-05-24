@@ -95,16 +95,6 @@ class DiagnosticVisualizer:
         if len(items) > 20:
             plt.xticks(rotation=45, ha='right')
         
-        # Add value labels on bars
-        for bar, p_val in zip(bars, p_values):
-            height = bar.get_height()
-            ax.annotate(f'{p_val:.2f}',
-                       xy=(bar.get_x() + bar.get_width() / 2, height),
-                       xytext=(0, 3),
-                       textcoords="offset points",
-                       ha='center', va='bottom',
-                       fontsize=8)
-        
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
         plt.close()
