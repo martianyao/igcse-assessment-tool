@@ -1,41 +1,41 @@
 {
-    "subject": "Mathematics",
+    "subject": "Chemistry",
     "code": "0580",
     "topics": {
         "1": {
-            "name": "Number",
+            "name": "atmoic structure",
             "subtopics": [
-                "Integers",
-                "Fractions",
-                "Decimals",
-                "Percentages"
+                "Atoms and elements",
+                "Isotopes",
+                "Electronic configuration",
+                "Periodic table"
             ]
         },
         "2": {
-            "name": "Algebra & Graphs",
+            "name": "Bonding and Structure",
             "subtopics": [
-                "Linear equations",
-                "Quadratics",
-                "Inequalities",
-                "Graphs"
+                "Ionic bonding",
+                "Covalent bonding",
+                "Metallic bonding",
+                "Molecular structure"
             ]
         },
         "3": {
-            "name": "Coordinate Geometry",
+            "name": "Chemical Reactions",
             "subtopics": [
-                "Distance",
-                "Midpoint",
-                "Gradient",
-                "Equations of lines"
+                "Types of reactions",
+                "Balancing equations",
+                "Energy changes",
+                "Rates of reaction"
             ]
         },
         "4": {
-            "name": "Geometry",
+            "name": "Acids and Bases",
             "subtopics": [
-                "Angles",
-                "Triangles",
-                "Quadrilaterals",
-                "Circles"
+                "Properties of acids and bases",
+                "pH scale",
+                "Neutralization reactions",
+                "Indicators"
             ]
         }
     }

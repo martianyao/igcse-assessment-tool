@@ -51,7 +51,7 @@ class DataIngestion:
         mcq = self.load_mcq_results()
         assign = self.load_assignments()
         part = self.load_participation()
-        from src.ingestion import StudentRecord, ClassData  # now safe
+        # No import needed - StudentRecord and ClassData are already defined above
         cd = ClassData()
         # build StudentRecord per student_id
         for sid in mcq["student_id"]:
@@ -140,3 +140,38 @@ def generate_sample_data(
         "average": np.random.uniform(1, 5, num_students),
     })
     part.to_csv(output_dir / "sample_participation.csv", index=False)
+if __name__ == "__main__":
+    # Quick test
+    import tempfile
+    
+    with tempfile.TemporaryDirectory() as tmpdir:
+        # Generate sample data
+        generate_sample_data(Path(tmpdir), num_students=5, num_questions=10)
+        
+        # Test loading
+        ingestion = DataIngestion(Path(tmpdir))
+        
+        # Rename files to match expected names
+        (Path(tmpdir) / 'sample_mcq_results.csv').rename(
+            Path(tmpdir) / 'mcq_results.csv'
+        )
+        (Path(tmpdir) / 'sample_assignments.csv').rename(
+            Path(tmpdir) / 'assignments.csv'
+        )
+        (Path(tmpdir) / 'sample_participation.csv').rename(
+            Path(tmpdir) / 'participation.csv'
+        )
+        
+        class_data = ingestion.merge_all_data()
+        
+        print(f"✅ Successfully loaded {class_data.num_students} students")
+        print(f"📊 MCQ questions: {class_data.num_questions}")
+        print(f"📚 Number of students: {class_data.num_students}")
+        
+        # Show sample student
+        if class_data.students:
+            sample_student = list(class_data.students.values())[0]
+            print(f"\n👤 Sample student: {sample_student.student_id}")
+            print(f"   - MCQ score: {sample_student.mcq_total}")
+            print(f"   - Assignment total: {sample_student.assignment_total:.1f}")
+            print(f"   - Participation avg: {sample_student.participation_avg:.1f}")
