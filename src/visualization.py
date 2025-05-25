@@ -7,6 +7,10 @@ Creates charts and visualizations for diagnostic results:
 - Class-wide weakness heatmaps
 - Individual student profiles
 """
+import sys
+from pathlib import Path
+# Add the parent directory to Python path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -144,14 +148,6 @@ class DiagnosticVisualizer:
         cbar = plt.colorbar(scatter, ax=ax)
         cbar.set_label('Discrimination', fontsize=10)
         
-        # Add text annotations for quadrants
-        ax.text(0.25, 0.6, 'Good Items\n(Hard + Discriminating)', 
-                ha='center', va='center', fontsize=10, alpha=0.7,
-                bbox=dict(boxstyle="round,pad=0.3", facecolor="lightgreen", alpha=0.5))
-        ax.text(0.75, 0.6, 'Excellent Items\n(Easy + Discriminating)', 
-                ha='center', va='center', fontsize=10, alpha=0.7,
-                bbox=dict(boxstyle="round,pad=0.3", facecolor="green", alpha=0.5))
-        
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
         plt.close()
@@ -198,13 +194,6 @@ class DiagnosticVisualizer:
                    medianprops=dict(color='red', linewidth=2))
         ax2.set_ylabel('Total Score', fontsize=12)
         ax2.set_title('Score Summary', fontsize=14, fontweight='bold')
-        
-        # Add percentile annotations
-        percentiles = [25, 50, 75]
-        for p in percentiles:
-            val = np.percentile(scores, p)
-            ax2.text(1.1, val, f'{p}th: {val:.1f}', 
-                    va='center', fontsize=10)
         
         plt.suptitle('Student Performance Distribution', fontsize=16, fontweight='bold')
         plt.tight_layout()
@@ -288,65 +277,29 @@ class DiagnosticVisualizer:
         ax.set_title('Performance by Question Difficulty', fontsize=16, fontweight='bold')
         ax.set_ylim(0, 105)
         
-        # Add mean annotations
-        for i, (level, data) in enumerate(difficulty_data.items()):
-            if data:
-                mean_val = np.mean(data)
-                ax.text(i+1, mean_val + 2, f'{mean_val:.1f}%', 
-                       ha='center', fontsize=10, fontweight='bold')
-        
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
         plt.close()
         
         logger.info(f"Difficulty performance chart saved to {save_path}")
+
+
+if __name__ == "__main__":
+    # Test visualization
+    from src.ingestion import DataIngestion
+    from src.diagnostics import WeaknessAnalyzer
     
-    def create_student_report(self, student_id: str, save_path: Optional[Path] = None) -> None:
-        """Create individual student performance report."""
-        if save_path is None:
-            save_path = self.output_dir / f"student_{student_id}_report.png"
-        
-        profile = self.analyzer.student_profiles.get(student_id)
-        if not profile:
-            logger.error(f"No profile found for student {student_id}")
-            return
-        
-        # Create figure with subplots
-        fig = plt.figure(figsize=(12, 10))
-        
-        # Define grid
-        gs = fig.add_gridspec(3, 2, height_ratios=[1, 1.5, 1.5], hspace=0.3, wspace=0.3)
-        
-        # 1. Summary statistics (top)
-        ax_summary = fig.add_subplot(gs[0, :])
-        ax_summary.axis('off')
-        
-        summary_text = (
-            f"Student ID: {student_id}\n"
-            f"Overall Score: {profile.overall_mcq_percentage:.1f}%\n"
-            f"Class Ranking: {profile.relative_performance:.2f}x average\n"
-            f"Questions Missed: {len(profile.weak_questions)}/{len(self.analyzer.class_data.mcq_questions)}"
-        )
-        
-        ax_summary.text(0.5, 0.5, summary_text, 
-                       fontsize=14, ha='center', va='center',
-                       bbox=dict(boxstyle="round,pad=1", facecolor="lightblue", alpha=0.7))
-        
-        # 2. Performance by difficulty
-        ax_diff = fig.add_subplot(gs[1, 0])
-        levels = list(profile.performance_by_difficulty.keys())
-        values = list(profile.performance_by_difficulty.values())
-        colors = ['green', 'orange', 'red']
-        
-        bars = ax_diff.bar(levels, values, color=colors[:len(levels)], alpha=0.7)
-        ax_diff.set_ylabel('Performance (%)')
-        ax_diff.set_title('Performance by Difficulty')
-        ax_diff.set_ylim(0, 105)
-        
-        # Add value labels
-        for bar, val in zip(bars, values):
-            ax_diff.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1,
-                        f'{val:.1f}%', ha='center', fontsize=10)
-        
-        # 3. Focus areas
-        ax_focus = fig.ad
+    # Load data and run analysis
+    data_dir = Path("data")
+    ingestion = DataIngestion(data_dir)
+    class_data = ingestion.merge_all_data()
+    
+    analyzer = WeaknessAnalyzer(class_data)
+    analyzer.analyze()
+    
+    # Create visualizations
+    visualizer = DiagnosticVisualizer(analyzer)
+    visualizer.create_all_visualizations()
+    
+    print("\n✅ All visualizations created successfully!")
+    print(f"📁 Check the output/visualizations/ folder for charts")
