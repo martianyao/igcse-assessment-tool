@@ -1,0 +1,679 @@
+{
+    "chemistry_questions_bank": {
+        "1.1_solids_liquids_gases": {
+            "subtopic": "Properties and Structure of Solids, Liquids and Gases",
+            "level": "easy",
+            "questions": [
+                {
+                    "id": "SLG_001",
+                    "difficulty": "Easy",
+                    "question": "Which statement about a solid, a liquid or a gas is correct?",
+                    "options": {
+                        "A": "A solid has a fixed shape and can be compressed.",
+                        "B": "A liquid takes the shape of the container it is in and can be compressed.",
+                        "C": "A solid has no fixed shape and cannot be compressed.",
+                        "D": "A gas takes the shape of the container it is in and can be compressed."
+                    },
+                    "correct_answer": "D",
+                    "explanation": "Gases take the shape of their container and can be compressed due to large spaces between particles."
+                },
+                {
+                    "id": "SLG_002",
+                    "difficulty": "Medium",
+                    "question": "Which statement about the molecules in ice, water or steam is correct?",
+                    "options": {
+                        "A": "The H2O molecules are on average closest together in steam.",
+                        "B": "The H2O molecules are on average furthest apart in water.",
+                        "C": "The H2O molecules in steam have the second highest average velocity.",
+                        "D": "The H2O molecules in ice are able to vibrate."
+                    },
+                    "correct_answer": "D",
+                    "explanation": "In ice (solid), molecules can vibrate around fixed positions but cannot move freely."
+                },
+                {
+                    "id": "SLG_003",
+                    "difficulty": "Hard",
+                    "question": "Which row describes the spacing and arrangement of particles in a solid, a liquid and a gas?",
+                    "options": {
+                        "A": "solid: close together and randomly arranged, liquid: close together and regularly arranged, gas: far apart and randomly arranged",
+                        "B": "solid: close together and randomly arranged, liquid: far apart and randomly arranged, gas: close together and randomly arranged",
+                        "C": "solid: close together and regularly arranged, liquid: close together and randomly arranged, gas: far apart and randomly arranged",
+                        "D": "solid: close together and regularly arranged, liquid: close together and regularly arranged, gas: close together and randomly arranged"
+                    },
+                    "correct_answer": "C",
+                    "explanation": "Solids have regular arrangements, liquids are close but random, gases are far apart and random."
+                }
+            ]
+        },
+        "1.2_changes_of_state": {
+            "subtopic": "Changes of State",
+            "level": "medium",
+            "questions": [
+                {
+                    "id": "COS_001",
+                    "difficulty": "Easy",
+                    "question": "What are the processes X, Y and Z in the state changes shown: solid ←X→ liquid ←Y→ gas ←Z→ solid?",
+                    "options": {
+                        "A": "X: melting, Y: condensing, Z: evaporating",
+                        "B": "X: evaporating, Y: melting, Z: freezing",
+                        "C": "X: melting, Y: freezing, Z: condensing",
+                        "D": "X: freezing, Y: evaporating, Z: condensing"
+                    },
+                    "correct_answer": "A",
+                    "explanation": "X is melting (solid to liquid), Y is evaporating (liquid to gas), Z is sublimation (gas to solid)."
+                },
+                {
+                    "id": "COS_002",
+                    "difficulty": "Medium",
+                    "question": "Which two diagrams show the states of matter before and after the sublimation of carbon dioxide?",
+                    "options": {
+                        "A": "2 to 1",
+                        "B": "2 to 3",
+                        "C": "3 to 1",
+                        "D": "3 to 2"
+                    },
+                    "correct_answer": "C",
+                    "explanation": "Sublimation is the direct change from solid (3) to gas (1), skipping the liquid phase."
+                },
+                {
+                    "id": "COS_003",
+                    "difficulty": "Hard",
+                    "question": "What is the melting point of substance X from the heating curve showing temperature vs time?",
+                    "options": {
+                        "A": "20°C",
+                        "B": "170°C",
+                        "C": "240°C",
+                        "D": "270°C"
+                    },
+                    "correct_answer": "B",
+                    "explanation": "The melting point is where temperature remains constant during the phase change, shown as a horizontal line on the heating curve."
+                }
+            ]
+        },
+        "1.3_kinetic_particle_theory": {
+            "subtopic": "Kinetic Particle Theory",
+            "level": "hard",
+            "questions": [
+                {
+                    "id": "KPT_001",
+                    "difficulty": "Medium",
+                    "question": "Which row describes the cause of gas pressure and the effect of increasing temperature?",
+                    "options": {
+                        "A": "collisions between gas particles, collisions become less frequent",
+                        "B": "collisions between gas particles, the average speed of gas particles increases",
+                        "C": "collisions between gas particles and container, collisions become less frequent",
+                        "D": "collisions between gas particles and container, the average speed of gas particles increases"
+                    },
+                    "correct_answer": "D",
+                    "explanation": "Gas pressure is caused by particle collisions with container walls. Higher temperature increases particle speed."
+                },
+                {
+                    "id": "KPT_002",
+                    "difficulty": "Hard",
+                    "question": "Between which times is substance M freezing on the cooling curve?",
+                    "options": {
+                        "A": "P to Q",
+                        "B": "Q to R",
+                        "C": "R to S",
+                        "D": "S to T"
+                    },
+                    "correct_answer": "B",
+                    "explanation": "Freezing occurs when temperature remains constant as liquid changes to solid (horizontal section of cooling curve)."
+                },
+                {
+                    "id": "KPT_003",
+                    "difficulty": "Hard",
+                    "question": "In which changes of state is energy being given out?",
+                    "options": {
+                        "A": "1 and 2",
+                        "B": "1 and 4",
+                        "C": "2 and 3",
+                        "D": "3 and 4"
+                    },
+                    "correct_answer": "D",
+                    "explanation": "Energy is given out during condensation (gas to liquid) and freezing (liquid to solid) as particles lose kinetic energy."
+                }
+            ]
+        },
+        "1.4_gas_behavior": {
+            "subtopic": "Effects of Temperature and Pressure on Gases",
+            "level": "medium",
+            "questions": [
+                {
+                    "id": "GB_001",
+                    "difficulty": "Easy",
+                    "question": "A gas is heated from 50°C to 100°C in a sealed container. What happens to the gas particles?",
+                    "options": {
+                        "A": "They move more slowly",
+                        "B": "They move faster and collide more frequently with the container",
+                        "C": "They get closer together",
+                        "D": "They stop moving"
+                    },
+                    "correct_answer": "B",
+                    "explanation": "Higher temperature increases particle kinetic energy, making them move faster and collide more frequently."
+                },
+                {
+                    "id": "GB_002",
+                    "difficulty": "Medium",
+                    "question": "Which statement about liquids and gases is correct?",
+                    "options": {
+                        "A": "1 cm³ of gas contains more particles than 1 cm³ of liquid.",
+                        "B": "A given mass of liquid has a fixed volume at room temperature.",
+                        "C": "Particles in a liquid can easily be forced closer together.",
+                        "D": "Particles in a liquid have fixed positions."
+                    },
+                    "correct_answer": "B",
+                    "explanation": "Liquids are incompressible and maintain fixed volume at constant temperature, unlike gases."
+                },
+                {
+                    "id": "GB_003",
+                    "difficulty": "Hard",
+                    "question": "The melting and boiling points of argon (-189°C, -186°C), nitrogen (-210°C, -196°C), and oxygen (-218°C, -183°C) are shown. At -200°C and 1 atm, how many samples are liquids?",
+                    "options": {
+                        "A": "0",
+                        "B": "1",
+                        "C": "2",
+                        "D": "3"
+                    },
+                    "correct_answer": "C",
+                    "explanation": "At -200°C: nitrogen (-210°C < -200°C < -196°C) and oxygen (-218°C < -200°C < -183°C) are liquids."
+                }
+            ]
+        },
+        "1.5_diffusion": {
+            "subtopic": "Diffusion",
+            "level": "hard",
+            "questions": [
+                {
+                    "id": "DIF_001",
+                    "difficulty": "Easy",
+                    "question": "What is diffusion?",
+                    "options": {
+                        "A": "The movement of particles from high to low concentration",
+                        "B": "The movement of particles from low to high concentration",
+                        "C": "The arrangement of particles in a regular pattern",
+                        "D": "The vibration of particles in fixed positions"
+                    },
+                    "correct_answer": "A",
+                    "explanation": "Diffusion is the net movement of particles down a concentration gradient."
+                },
+                {
+                    "id": "DIF_002",
+                    "difficulty": "Medium",
+                    "question": "Which gas would diffuse fastest?",
+                    "options": {
+                        "A": "Hydrogen (H₂)",
+                        "B": "Oxygen (O₂)",
+                        "C": "Carbon dioxide (CO₂)",
+                        "D": "Chlorine (Cl₂)"
+                    },
+                    "correct_answer": "A",
+                    "explanation": "Lighter molecules diffuse faster. Hydrogen has the lowest molecular mass."
+                },
+                {
+                    "id": "DIF_003",
+                    "difficulty": "Hard",
+                    "question": "Diffusion occurs faster in gases than in liquids because:",
+                    "options": {
+                        "A": "Gas particles are larger",
+                        "B": "Gas particles are further apart and move faster",
+                        "C": "Gas particles are closer together",
+                        "D": "Liquid particles move faster"
+                    },
+                    "correct_answer": "B",
+                    "explanation": "Greater spaces between gas particles and higher kinetic energy allow faster diffusion."
+                }
+            ]
+        },
+        "2.1_elements_compounds_mixtures": {
+            "subtopic": "Elements, Compounds and Mixtures",
+            "level": "easy",
+            "questions": [
+                {
+                    "id": "ECM_001",
+                    "difficulty": "Easy",
+                    "question": "Which statement describes a compound?",
+                    "options": {
+                        "A": "It contains two or more elements chemically combined.",
+                        "B": "It contains two or more elements physically combined.",
+                        "C": "It contains two or more elements forming an alloy.",
+                        "D": "It contains two or more elements that can easily be separated."
+                    },
+                    "correct_answer": "A",
+                    "explanation": "A compound is formed when two or more elements are chemically combined in fixed proportions."
+                },
+                {
+                    "id": "ECM_002",
+                    "difficulty": "Easy",
+                    "question": "Which substance is a pure compound?",
+                    "options": {
+                        "A": "air",
+                        "B": "brass",
+                        "C": "ethanol",
+                        "D": "petroleum"
+                    },
+                    "correct_answer": "C",
+                    "explanation": "Ethanol (C₂H₅OH) is a pure compound. Air and petroleum are mixtures, brass is an alloy."
+                },
+                {
+                    "id": "ECM_003",
+                    "difficulty": "Medium",
+                    "question": "Which row about elements, mixtures and compounds is correct?",
+                    "options": {
+                        "A": "metallic element: copper, non-metallic element: methane, mixture: brass, compound: sulfur",
+                        "B": "metallic element: brass, non-metallic element: sulfur, mixture: copper, compound: methane",
+                        "C": "metallic element: copper, non-metallic element: sulfur, mixture: brass, compound: methane",
+                        "D": "metallic element: brass, non-metallic element: methane, mixture: copper, compound: sulfur"
+                    },
+                    "correct_answer": "C",
+                    "explanation": "Copper is a metallic element, sulfur is non-metallic, brass is a mixture (alloy), methane is a compound."
+                }
+            ]
+        },
+        "2.2_atomic_structure": {
+            "subtopic": "Atomic Structure and Periodic Table",
+            "level": "medium",
+            "questions": [
+                {
+                    "id": "AS_001",
+                    "difficulty": "Easy",
+                    "question": "What are the relative charge and relative mass of an electron?",
+                    "options": {
+                        "A": "charge: 0, mass: 1",
+                        "B": "charge: 0, mass: 1/2000",
+                        "C": "charge: -1, mass: 1",
+                        "D": "charge: -1, mass: 1/2000"
+                    },
+                    "correct_answer": "D",
+                    "explanation": "Electrons have -1 charge and negligible mass (approximately 1/2000 of a proton)."
+                },
+                {
+                    "id": "AS_002",
+                    "difficulty": "Medium",
+                    "question": "Which statement about the noble gases is correct?",
+                    "options": {
+                        "A": "Noble gases are diatomic molecules.",
+                        "B": "Noble gases are reactive gases.",
+                        "C": "Noble gases have full outer electron shells.",
+                        "D": "The noble gases are found on the left-hand side of the Periodic Table."
+                    },
+                    "correct_answer": "C",
+                    "explanation": "Noble gases are unreactive because they have complete outer electron shells."
+                },
+                {
+                    "id": "AS_003",
+                    "difficulty": "Hard",
+                    "question": "Elements P and Q have the same number of electron shells. An atom of Q has more electrons in its outer shell than P. Which statements are correct?",
+                    "options": {
+                        "A": "1 and 3: P and Q are in same group; P forms positive ions more easily",
+                        "B": "1 and 4: P and Q are in same group; Q's oxide is more basic",
+                        "C": "2 and 3: P and Q are in same period; P forms positive ions more easily",
+                        "D": "2 and 4: P and Q are in same period; Q's oxide is more basic"
+                    },
+                    "correct_answer": "C",
+                    "explanation": "Same electron shells = same period. Q has more outer electrons so is more non-metallic, making P more metallic."
+                }
+            ]
+        },
+        "2.3_isotopes": {
+            "subtopic": "Isotopes",
+            "level": "hard",
+            "questions": [
+                {
+                    "id": "ISO_001",
+                    "difficulty": "Medium",
+                    "question": "Which pair of atoms contains the same number of neutrons?",
+                    "options": {
+                        "A": "₂₇⁵⁹Co and ₂₈⁵⁹Ni",
+                        "B": "₂₉⁶⁴Cu and ₂₉⁶⁵Cu",
+                        "C": "₂₉⁶⁴Cu and ₃₀⁶⁵Zn",
+                        "D": "₂₉⁶⁵Cu and ₃₀⁶⁵Zn"
+                    },
+                    "correct_answer": "C",
+                    "explanation": "Cu-64: 64-29=35 neutrons, Zn-65: 65-30=35 neutrons. Same number of neutrons."
+                },
+                {
+                    "id": "ISO_002",
+                    "difficulty": "Hard",
+                    "question": "Information about atoms X, Y and Z: X(1,1), Y(1,2), Z(1,3). Which statements are correct? 1) Isotopes of same element 2) Same number of electrons 3) Same number of neutrons 4) One occupied electron shell",
+                    "options": {
+                        "A": "1, 2 and 4",
+                        "B": "1 and 2 only",
+                        "C": "3 and 4",
+                        "D": "3 only"
+                    },
+                    "correct_answer": "A",
+                    "explanation": "All have 1 proton (same element), 1 electron each, and 1 electron shell. Different neutron numbers."
+                },
+                {
+                    "id": "ISO_003",
+                    "difficulty": "Hard",
+                    "question": "Which statement about an atom of fluorine, ₉¹⁹F, is correct?",
+                    "options": {
+                        "A": "It contains a total of 28 protons, neutrons and electrons.",
+                        "B": "It contains more protons than neutrons.",
+                        "C": "Its isotopes contain different numbers of protons.",
+                        "D": "Its nucleus contains 9 neutrons."
+                    },
+                    "correct_answer": "A",
+                    "explanation": "₉¹⁹F has 9 protons + 10 neutrons + 9 electrons = 28 total particles."
+                }
+            ]
+        },
+        "2.4_ionic_bonding": {
+            "subtopic": "Ions and Ionic Bonds",
+            "level": "medium",
+            "questions": [
+                {
+                    "id": "IB_001",
+                    "difficulty": "Easy",
+                    "question": "Which statement about ions and ionic bonds is correct?",
+                    "options": {
+                        "A": "Bromine atoms form negatively charged bromide ions.",
+                        "B": "Ionic bonds form between elements in Group VII of the Periodic Table.",
+                        "C": "Positive ions are formed when atoms lose protons.",
+                        "D": "Potassium iodide contains negatively charged potassium ions."
+                    },
+                    "correct_answer": "A",
+                    "explanation": "Bromine atoms gain electrons to form Br⁻ ions (bromide ions)."
+                },
+                {
+                    "id": "IB_002",
+                    "difficulty": "Medium",
+                    "question": "Which statement describes the bonding in sodium chloride?",
+                    "options": {
+                        "A": "A shared pair of electrons between two atoms leading to a noble gas configuration.",
+                        "B": "A strong force of attraction between oppositely charged ions.",
+                        "C": "A strong force of attraction between two molecules.",
+                        "D": "A weak force of attraction between oppositely charged ions."
+                    },
+                    "correct_answer": "B",
+                    "explanation": "Ionic bonding involves strong electrostatic attraction between oppositely charged ions."
+                },
+                {
+                    "id": "IB_003",
+                    "difficulty": "Hard",
+                    "question": "Elements X and Y react to form a compound. Element X loses two electrons and element Y gains one electron. What is the charge on the ions and formula of the compound?",
+                    "options": {
+                        "A": "charge on X: 2+, charge on Y: -, formula: X₂Y",
+                        "B": "charge on X: 2+, charge on Y: -, formula: XY₂",
+                        "C": "charge on X: 2-, charge on Y: +, formula: X₂Y",
+                        "D": "charge on X: 2-, charge on Y: +, formula: XY₂"
+                    },
+                    "correct_answer": "B",
+                    "explanation": "X loses 2 electrons → X²⁺, Y gains 1 electron → Y⁻. To balance: one X²⁺ needs two Y⁻ = XY₂."
+                }
+            ]
+        },
+        "2.5_covalent_bonding": {
+            "subtopic": "Covalent Bonds and Molecular Structures",
+            "level": "hard",
+            "questions": [
+                {
+                    "id": "CB_001",
+                    "difficulty": "Easy",
+                    "question": "Which molecule has only two shared pairs of electrons?",
+                    "options": {
+                        "A": "CH₄",
+                        "B": "Cl₂",
+                        "C": "HCl",
+                        "D": "H₂O"
+                    },
+                    "correct_answer": "D",
+                    "explanation": "H₂O has two O-H bonds, each involving one shared pair of electrons, total = 2 shared pairs."
+                },
+                {
+                    "id": "CB_002",
+                    "difficulty": "Medium",
+                    "question": "Which row describes the formation of single covalent bonds in methane?",
+                    "options": {
+                        "A": "atoms share a pair of electrons, both atoms gain a noble gas electronic structure",
+                        "B": "atoms share a pair of electrons, both atoms have the same number of electrons in their outer shell",
+                        "C": "electrons are transferred from one atom to another, both atoms gain a noble gas electronic structure",
+                        "D": "electrons are transferred from one atom to another, both atoms have the same number of electrons in their outer shell"
+                    },
+                    "correct_answer": "A",
+                    "explanation": "Covalent bonding involves sharing electron pairs, allowing both atoms to achieve stable noble gas configurations."
+                },
+                {
+                    "id": "CB_003",
+                    "difficulty": "Hard",
+                    "question": "Which statement explains why graphite is used as a lubricant?",
+                    "options": {
+                        "A": "Each carbon atom in graphite forms three bonds.",
+                        "B": "The bonding in graphite is covalent.",
+                        "C": "The carbon atoms are arranged in hexagons.",
+                        "D": "There are weak forces of attraction between the layers of carbon atoms."
+                    },
+                    "correct_answer": "D",
+                    "explanation": "Graphite can act as a lubricant because the layers can slide over each other due to weak van der Waals forces."
+                }
+            ]
+        },
+        "7.1_acid_base_properties": {
+            "subtopic": "Characteristic Properties of Acids and Bases",
+            "level": "easy",
+            "questions": [
+                {
+                    "id": "ABP_001",
+                    "difficulty": "Easy",
+                    "question": "Which two ions are involved in the neutralisation reaction between dilute hydrochloric acid and aqueous sodium hydroxide?",
+                    "options": {
+                        "A": "Na⁺ and H⁺",
+                        "B": "H⁺ and OH⁻",
+                        "C": "Na⁺ and Cl⁻",
+                        "D": "OH⁻ and Cl⁻"
+                    },
+                    "correct_answer": "B",
+                    "explanation": "Neutralisation involves the reaction H⁺ + OH⁻ → H₂O."
+                },
+                {
+                    "id": "ABP_002",
+                    "difficulty": "Medium",
+                    "question": "Which statements about an aqueous acid are correct? 1) Ammonia formed with ammonium nitrate 2) Effervescence with sodium carbonate 3) Methyl orange turns yellow 4) Red litmus remains red",
+                    "options": {
+                        "A": "1 and 3",
+                        "B": "1 and 4",
+                        "C": "2 and 3",
+                        "D": "2 and 4"
+                    },
+                    "correct_answer": "D",
+                    "explanation": "Acids cause effervescence with carbonates (CO₂ produced) and keep red litmus red."
+                },
+                {
+                    "id": "ABP_003",
+                    "difficulty": "Hard",
+                    "question": "Which reaction produces ammonia gas?",
+                    "options": {
+                        "A": "warming ammonium chloride with dilute sodium hydroxide",
+                        "B": "warming ammonium nitrate with dilute sulfuric acid",
+                        "C": "warming ammonium phosphate with dilute sodium chloride",
+                        "D": "warming ammonium sulfate with dilute nitric acid"
+                    },
+                    "correct_answer": "A",
+                    "explanation": "Ammonium salts react with alkalis to produce ammonia gas: NH₄Cl + NaOH → NaCl + NH₃ + H₂O."
+                }
+            ]
+        },
+        "7.2_ph_and_indicators": {
+            "subtopic": "pH Scale and Indicators",
+            "level": "medium",
+            "questions": [
+                {
+                    "id": "PHI_001",
+                    "difficulty": "Easy",
+                    "question": "Which indicator turns yellow when added to a solution with pH 14?",
+                    "options": {
+                        "A": "litmus",
+                        "B": "methyl orange",
+                        "C": "thymolphthalein",
+                        "D": "universal indicator"
+                    },
+                    "correct_answer": "B",
+                    "explanation": "Methyl orange turns yellow in alkaline solutions (high pH)."
+                },
+                {
+                    "id": "PHI_002",
+                    "difficulty": "Medium",
+                    "question": "Four solutions J, K, L, M show these universal indicator colors: green, red, purple, orange. Which solutions are acidic?",
+                    "options": {
+                        "A": "J and M",
+                        "B": "K and M",
+                        "C": "K only",
+                        "D": "L only"
+                    },
+                    "correct_answer": "B",
+                    "explanation": "Red and orange colors indicate acidic solutions on the universal indicator scale."
+                },
+                {
+                    "id": "PHI_003",
+                    "difficulty": "Hard",
+                    "question": "The concentration of hydrogen ions in 0.1 mol/dm³ hydrochloric acid is higher than in 0.1 mol/dm³ ethanoic acid. Which statement explains this difference?",
+                    "options": {
+                        "A": "Ethanoic acid is an organic acid.",
+                        "B": "Ethanoic acid has a lower pH than hydrochloric acid.",
+                        "C": "Ethanoic acid is partially dissociated.",
+                        "D": "Ethanoic acid is a strong acid."
+                    },
+                    "correct_answer": "C",
+                    "explanation": "Ethanoic acid is a weak acid that only partially dissociates, producing fewer H⁺ ions than the strong acid HCl."
+                }
+            ]
+        },
+        "7.3_neutralization": {
+            "subtopic": "Neutralization Reactions",
+            "level": "medium",
+            "questions": [
+                {
+                    "id": "NEU_001",
+                    "difficulty": "Easy",
+                    "question": "Which equation represents the neutralisation of nitric acid using sodium hydroxide?",
+                    "options": {
+                        "A": "NaOH(aq) + HNO₃(aq) → NaNO₃(aq) + H₂O(l)",
+                        "B": "NaOH(aq) + HNO₃(aq) → NaNO₃(l) + H₂O(l)",
+                        "C": "NaOH(l) + HNO₃(l) → NaNO₃(l) + H₂O(aq)",
+                        "D": "NaOH(l) + HNO₃(l) → NaNO₃(l) + H₂O(l)"
+                    },
+                    "correct_answer": "A",
+                    "explanation": "Neutralization: acid + base → salt + water. Correct state symbols: aqueous reactants, aqueous salt, liquid water."
+                },
+                {
+                    "id": "NEU_002",
+                    "difficulty": "Medium",
+                    "question": "Which products are formed when magnesium hydroxide reacts with hydrochloric acid?",
+                    "options": {
+                        "A": "magnesium chloride, carbon dioxide and water",
+                        "B": "magnesium chloride, hydrogen and water",
+                        "C": "magnesium chloride and hydrogen only",
+                        "D": "magnesium chloride and water only"
+                    },
+                    "correct_answer": "D",
+                    "explanation": "Base + acid → salt + water. Mg(OH)₂ + 2HCl → MgCl₂ + 2H₂O."
+                },
+                {
+                    "id": "NEU_003",
+                    "difficulty": "Hard",
+                    "question": "When an acid is added to an alkali, the temperature rises. Which words describe this reaction?",
+                    "options": {
+                        "A": "decomposition and endothermic",
+                        "B": "decomposition and exothermic",
+                        "C": "neutralisation and endothermic",
+                        "D": "neutralisation and exothermic"
+                    },
+                    "correct_answer": "D",
+                    "explanation": "Neutralization reactions are exothermic (release heat), causing temperature to rise."
+                }
+            ]
+        },
+        "7.4_salt_preparation": {
+            "subtopic": "Preparation of Salts",
+            "level": "hard",
+            "questions": [
+                {
+                    "id": "SP_001",
+                    "difficulty": "Medium",
+                    "question": "In the preparation of copper(II) sulfate crystals, why is filtration necessary?",
+                    "options": {
+                        "A": "to remove soluble impurities",
+                        "B": "to remove sulfuric acid",
+                        "C": "to remove the blue crystals",
+                        "D": "to remove unreacted copper(II) oxide"
+                    },
+                    "correct_answer": "D",
+                    "explanation": "Excess copper(II) oxide is used, so unreacted solid must be filtered out."
+                },
+                {
+                    "id": "SP_002",
+                    "difficulty": "Hard",
+                    "question": "Why is an excess of copper(II) carbonate added when preparing copper(II) sulfate?",
+                    "options": {
+                        "A": "to ensure all the copper(II) carbonate has reacted",
+                        "B": "to ensure all the sulfuric acid has reacted",
+                        "C": "to increase the rate of reaction",
+                        "D": "to increase the amount of copper(II) sulfate produced"
+                    },
+                    "correct_answer": "B",
+                    "explanation": "Excess solid reactant ensures all acid is consumed, preventing contamination with unreacted acid."
+                },
+                {
+                    "id": "SP_003",
+                    "difficulty": "Hard",
+                    "question": "Which processes are part of preparing solid copper(II) sulfate? 1) crystallisation 2) distillation 3) filtration 4) titration",
+                    "options": {
+                        "A": "1 and 3",
+                        "B": "1 and 4",
+                        "C": "2 and 3",
+                        "D": "2 and 4"
+                    },
+                    "correct_answer": "A",
+                    "explanation": "Salt preparation involves filtration (remove excess reactant) and crystallisation (obtain pure crystals)."
+                }
+            ]
+        },
+        "7.5_oxides_classification": {
+            "subtopic": "Classification of Oxides",
+            "level": "hard",
+            "questions": [
+                {
+                    "id": "OC_001",
+                    "difficulty": "Easy",
+                    "question": "Which element forms an acidic oxide?",
+                    "options": {
+                        "A": "calcium",
+                        "B": "lithium",
+                        "C": "magnesium",
+                        "D": "sulfur"
+                    },
+                    "correct_answer": "D",
+                    "explanation": "Sulfur is a non-metal that forms acidic oxides (SO₂, SO₃)."
+                },
+                {
+                    "id": "OC_002",
+                    "difficulty": "Medium",
+                    "question": "The oxides of elements X and Y are dissolved in water. X gives pH 1, Y gives pH 13. Which information is correct?",
+                    "options": {
+                        "A": "X oxide acidic, Y oxide basic, X metal, Y non-metal",
+                        "B": "X oxide acidic, Y oxide basic, X non-metal, Y metal",
+                        "C": "X oxide basic, Y oxide acidic, X metal, Y non-metal",
+                        "D": "X oxide basic, Y oxide acidic, X non-metal, Y metal"
+                    },
+                    "correct_answer": "B",
+                    "explanation": "pH 1 = acidic oxide (from non-metal X), pH 13 = basic oxide (from metal Y)."
+                },
+                {
+                    "id": "OC_003",
+                    "difficulty": "Hard",
+                    "question": "Which oxide is classified as amphoteric?",
+                    "options": {
+                        "A": "aluminium oxide",
+                        "B": "calcium oxide",
+                        "C": "copper(II) oxide",
+                        "D": "nitrogen oxide"
+                    },
+                    "correct_answer": "A",
+                    "explanation": "Aluminium oxide is amphoteric - it can react with both acids and bases."
+                }
+            ]
+        }
+    }
+}

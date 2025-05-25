@@ -1,42 +1,101 @@
 {
-    "subject": "Chemistry",
-    "code": "0580",
+    "syllabus": "Cambridge IGCSE Chemistry 0620",
+    "exam_years": "2023, 2024, 2025",
     "topics": {
-        "1": {
-            "name": "atmoic structure",
-            "subtopics": [
-                "Atoms and elements",
-                "Isotopes",
-                "Electronic configuration",
-                "Periodic table"
-            ]
+        "1_states_of_matter": {
+            "title": "States of Matter",
+            "subtopics": {
+                "1.1_solids_liquids_gases": {
+                    "title": "Properties and Structure of Solids, Liquids and Gases",
+                    "level": "easy",
+                    "description": "Distinguishing properties and particle arrangements in different states of matter"
+                },
+                "1.2_changes_of_state": {
+                    "title": "Changes of State",
+                    "level": "medium",
+                    "description": "Melting, boiling, evaporating, freezing, and condensing processes"
+                },
+                "1.3_kinetic_particle_theory": {
+                    "title": "Kinetic Particle Theory",
+                    "level": "hard",
+                    "description": "Explaining state changes and gas behavior using particle movement and energy"
+                },
+                "1.4_gas_behavior": {
+                    "title": "Effects of Temperature and Pressure on Gases",
+                    "level": "medium",
+                    "description": "How temperature and pressure affect gas volume and particle motion"
+                },
+                "1.5_diffusion": {
+                    "title": "Diffusion",
+                    "level": "hard",
+                    "description": "Particle movement and effect of molecular mass on diffusion rates"
+                }
+            }
         },
-        "2": {
-            "name": "Bonding and Structure",
-            "subtopics": [
-                "Ionic bonding",
-                "Covalent bonding",
-                "Metallic bonding",
-                "Molecular structure"
-            ]
+        "2_atoms_elements_compounds": {
+            "title": "Atoms, Elements and Compounds",
+            "subtopics": {
+                "2.1_elements_compounds_mixtures": {
+                    "title": "Elements, Compounds and Mixtures",
+                    "level": "easy",
+                    "description": "Differences between pure substances and mixtures"
+                },
+                "2.2_atomic_structure": {
+                    "title": "Atomic Structure and Periodic Table",
+                    "level": "medium",
+                    "description": "Nucleus, electrons, protons, neutrons, electronic configuration, and periodic trends"
+                },
+                "2.3_isotopes": {
+                    "title": "Isotopes",
+                    "level": "hard",
+                    "description": "Same element with different neutron numbers, relative atomic mass calculations"
+                },
+                "2.4_ionic_bonding": {
+                    "title": "Ions and Ionic Bonds",
+                    "level": "medium",
+                    "description": "Formation of cations and anions, ionic compounds and their properties"
+                },
+                "2.5_covalent_bonding": {
+                    "title": "Covalent Bonds and Molecular Structures",
+                    "level": "hard",
+                    "description": "Electron sharing, dot-and-cross diagrams, simple molecules and giant covalent structures"
+                }
+            }
         },
-        "3": {
-            "name": "Chemical Reactions",
-            "subtopics": [
-                "Types of reactions",
-                "Balancing equations",
-                "Energy changes",
-                "Rates of reaction"
-            ]
-        },
-        "4": {
-            "name": "Acids and Bases",
-            "subtopics": [
-                "Properties of acids and bases",
-                "pH scale",
-                "Neutralization reactions",
-                "Indicators"
-            ]
+        "7_acids_bases_salts": {
+            "title": "Acids, Bases and Salts",
+            "subtopics": {
+                "7.1_acid_base_properties": {
+                    "title": "Characteristic Properties of Acids and Bases",
+                    "level": "easy",
+                    "description": "Reactions with metals, bases, carbonates; effect on indicators"
+                },
+                "7.2_ph_and_indicators": {
+                    "title": "pH Scale and Indicators",
+                    "level": "medium",
+                    "description": "Measuring acidity/alkalinity, strong vs weak acids, H⁺ and OH⁻ ions"
+                },
+                "7.3_neutralization": {
+                    "title": "Neutralization Reactions",
+                    "level": "medium",
+                    "description": "Acid + base → salt + water, ionic equations for neutralization"
+                },
+                "7.4_salt_preparation": {
+                    "title": "Preparation of Salts",
+                    "level": "hard",
+                    "description": "Methods: titration, excess metal/base/carbonate, precipitation, purification techniques"
+                },
+                "7.5_oxides_classification": {
+                    "title": "Classification of Oxides",
+                    "level": "hard",
+                    "description": "Acidic, basic, and amphoteric oxides; relationship to metallic character"
+                }
+            }
         }
+    },
+    "difficulty_levels": {
+        "easy": "Basic concepts, definitions, simple observations and properties",
+        "medium": "Understanding processes, explanations of phenomena, applications of concepts",
+        "hard": "Complex explanations, calculations, advanced theory (often Supplement content)"
     }
 }
