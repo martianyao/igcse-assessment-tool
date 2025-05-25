@@ -1,101 +1,252 @@
 {
-    "syllabus": "Cambridge IGCSE Chemistry 0620",
-    "exam_years": "2023, 2024, 2025",
-    "topics": {
-        "1_states_of_matter": {
-            "title": "States of Matter",
-            "subtopics": {
-                "1.1_solids_liquids_gases": {
-                    "title": "Properties and Structure of Solids, Liquids and Gases",
-                    "level": "easy",
-                    "description": "Distinguishing properties and particle arrangements in different states of matter"
-                },
-                "1.2_changes_of_state": {
-                    "title": "Changes of State",
-                    "level": "medium",
-                    "description": "Melting, boiling, evaporating, freezing, and condensing processes"
-                },
-                "1.3_kinetic_particle_theory": {
-                    "title": "Kinetic Particle Theory",
-                    "level": "hard",
-                    "description": "Explaining state changes and gas behavior using particle movement and energy"
-                },
-                "1.4_gas_behavior": {
-                    "title": "Effects of Temperature and Pressure on Gases",
-                    "level": "medium",
-                    "description": "How temperature and pressure affect gas volume and particle motion"
-                },
-                "1.5_diffusion": {
-                    "title": "Diffusion",
-                    "level": "hard",
-                    "description": "Particle movement and effect of molecular mass on diffusion rates"
-                }
-            }
+    "chemistry_topics": {
+        "1.1_solids_liquids_gases": {
+            "title": "Properties and Structure of Solids, Liquids and Gases",
+            "level": "easy",
+            "weight": 1.0,
+            "keywords": [
+                "solid",
+                "liquid",
+                "gas",
+                "particle",
+                "arrangement",
+                "structure",
+                "properties",
+                "state",
+                "matter",
+                "phase"
+            ]
         },
-        "2_atoms_elements_compounds": {
-            "title": "Atoms, Elements and Compounds",
-            "subtopics": {
-                "2.1_elements_compounds_mixtures": {
-                    "title": "Elements, Compounds and Mixtures",
-                    "level": "easy",
-                    "description": "Differences between pure substances and mixtures"
-                },
-                "2.2_atomic_structure": {
-                    "title": "Atomic Structure and Periodic Table",
-                    "level": "medium",
-                    "description": "Nucleus, electrons, protons, neutrons, electronic configuration, and periodic trends"
-                },
-                "2.3_isotopes": {
-                    "title": "Isotopes",
-                    "level": "hard",
-                    "description": "Same element with different neutron numbers, relative atomic mass calculations"
-                },
-                "2.4_ionic_bonding": {
-                    "title": "Ions and Ionic Bonds",
-                    "level": "medium",
-                    "description": "Formation of cations and anions, ionic compounds and their properties"
-                },
-                "2.5_covalent_bonding": {
-                    "title": "Covalent Bonds and Molecular Structures",
-                    "level": "hard",
-                    "description": "Electron sharing, dot-and-cross diagrams, simple molecules and giant covalent structures"
-                }
-            }
+        "1.2_changes_of_state": {
+            "title": "Changes of State",
+            "level": "easy",
+            "weight": 1.0,
+            "keywords": [
+                "melting",
+                "boiling",
+                "freezing",
+                "condensation",
+                "evaporation",
+                "sublimation",
+                "state change",
+                "temperature",
+                "heat",
+                "transition"
+            ]
         },
-        "7_acids_bases_salts": {
-            "title": "Acids, Bases and Salts",
-            "subtopics": {
-                "7.1_acid_base_properties": {
-                    "title": "Characteristic Properties of Acids and Bases",
-                    "level": "easy",
-                    "description": "Reactions with metals, bases, carbonates; effect on indicators"
-                },
-                "7.2_ph_and_indicators": {
-                    "title": "pH Scale and Indicators",
-                    "level": "medium",
-                    "description": "Measuring acidity/alkalinity, strong vs weak acids, H⁺ and OH⁻ ions"
-                },
-                "7.3_neutralization": {
-                    "title": "Neutralization Reactions",
-                    "level": "medium",
-                    "description": "Acid + base → salt + water, ionic equations for neutralization"
-                },
-                "7.4_salt_preparation": {
-                    "title": "Preparation of Salts",
-                    "level": "hard",
-                    "description": "Methods: titration, excess metal/base/carbonate, precipitation, purification techniques"
-                },
-                "7.5_oxides_classification": {
-                    "title": "Classification of Oxides",
-                    "level": "hard",
-                    "description": "Acidic, basic, and amphoteric oxides; relationship to metallic character"
-                }
-            }
+        "1.3_kinetic_particle_theory": {
+            "title": "Kinetic Particle Theory",
+            "level": "medium",
+            "weight": 1.2,
+            "keywords": [
+                "kinetic",
+                "particle",
+                "motion",
+                "energy",
+                "temperature",
+                "theory",
+                "movement",
+                "vibration",
+                "molecular",
+                "speed"
+            ]
+        },
+        "1.4_gas_behavior": {
+            "title": "Gas Behavior and Properties",
+            "level": "medium",
+            "weight": 1.1,
+            "keywords": [
+                "gas",
+                "pressure",
+                "volume",
+                "temperature",
+                "behavior",
+                "expansion",
+                "compression",
+                "ideal",
+                "boyle",
+                "charles"
+            ]
+        },
+        "1.5_diffusion": {
+            "title": "Diffusion",
+            "level": "easy",
+            "weight": 1.0,
+            "keywords": [
+                "diffusion",
+                "spreading",
+                "concentration",
+                "gradient",
+                "molecules",
+                "mixing",
+                "rate",
+                "osmosis",
+                "membrane"
+            ]
+        },
+        "2.1_elements_compounds_mixtures": {
+            "title": "Elements, Compounds and Mixtures",
+            "level": "easy",
+            "weight": 1.0,
+            "keywords": [
+                "element",
+                "compound",
+                "mixture",
+                "pure",
+                "substance",
+                "separation",
+                "classification",
+                "homogeneous",
+                "heterogeneous"
+            ]
+        },
+        "2.2_atomic_structure": {
+            "title": "Atomic Structure",
+            "level": "medium",
+            "weight": 1.3,
+            "keywords": [
+                "atom",
+                "proton",
+                "neutron",
+                "electron",
+                "nucleus",
+                "shell",
+                "structure",
+                "atomic number",
+                "mass number",
+                "orbital"
+            ]
+        },
+        "2.3_isotopes": {
+            "title": "Isotopes",
+            "level": "medium",
+            "weight": 1.2,
+            "keywords": [
+                "isotope",
+                "mass number",
+                "atomic mass",
+                "neutron",
+                "radioactive",
+                "stable",
+                "decay",
+                "radioisotope"
+            ]
+        },
+        "2.4_ionic_bonding": {
+            "title": "Ionic Bonding",
+            "level": "medium",
+            "weight": 1.3,
+            "keywords": [
+                "ionic",
+                "bond",
+                "ion",
+                "electron",
+                "transfer",
+                "metal",
+                "non-metal",
+                "charge",
+                "cation",
+                "anion"
+            ]
+        },
+        "2.5_covalent_bonding": {
+            "title": "Covalent Bonding",
+            "level": "medium",
+            "weight": 1.3,
+            "keywords": [
+                "covalent",
+                "bond",
+                "electron",
+                "sharing",
+                "molecule",
+                "non-metal",
+                "pair",
+                "single",
+                "double",
+                "triple"
+            ]
+        },
+        "7.1_acid_base_properties": {
+            "title": "Acid and Base Properties",
+            "level": "medium",
+            "weight": 1.2,
+            "keywords": [
+                "acid",
+                "base",
+                "properties",
+                "reaction",
+                "hydrogen",
+                "hydroxide",
+                "corrosive",
+                "sour",
+                "bitter",
+                "alkali"
+            ]
+        },
+        "7.2_ph_and_indicators": {
+            "title": "pH and Indicators",
+            "level": "medium",
+            "weight": 1.2,
+            "keywords": [
+                "pH",
+                "indicator",
+                "universal",
+                "litmus",
+                "acidic",
+                "alkaline",
+                "neutral",
+                "scale",
+                "methyl",
+                "orange"
+            ]
+        },
+        "7.3_neutralization": {
+            "title": "Neutralization Reactions",
+            "level": "medium",
+            "weight": 1.3,
+            "keywords": [
+                "neutralization",
+                "reaction",
+                "acid",
+                "base",
+                "salt",
+                "water",
+                "products",
+                "titration",
+                "endpoint"
+            ]
+        },
+        "7.4_salt_preparation": {
+            "title": "Salt Preparation",
+            "level": "hard",
+            "weight": 1.4,
+            "keywords": [
+                "salt",
+                "preparation",
+                "crystallization",
+                "precipitation",
+                "soluble",
+                "insoluble",
+                "method",
+                "evaporation",
+                "filtration"
+            ]
+        },
+        "7.5_oxides_classification": {
+            "title": "Classification of Oxides",
+            "level": "hard",
+            "weight": 1.4,
+            "keywords": [
+                "oxide",
+                "acidic",
+                "basic",
+                "neutral",
+                "amphoteric",
+                "classification",
+                "metal",
+                "non-metal",
+                "oxygen"
+            ]
         }
-    },
-    "difficulty_levels": {
-        "easy": "Basic concepts, definitions, simple observations and properties",
-        "medium": "Understanding processes, explanations of phenomena, applications of concepts",
-        "hard": "Complex explanations, calculations, advanced theory (often Supplement content)"
     }
 }

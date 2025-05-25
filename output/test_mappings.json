@@ -1,0 +1,280 @@
+{
+  "mappings": [
+    {
+      "question_id": "SLG_001",
+      "topic_id": "1.1_solids_liquids_gases",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "SLG_002",
+      "topic_id": "1.1_solids_liquids_gases",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "SLG_003",
+      "topic_id": "1.1_solids_liquids_gases",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "COS_001",
+      "topic_id": "1.2_changes_of_state",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "COS_002",
+      "topic_id": "1.2_changes_of_state",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "COS_003",
+      "topic_id": "1.2_changes_of_state",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "KPT_001",
+      "topic_id": "1.3_kinetic_particle_theory",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "KPT_002",
+      "topic_id": "1.3_kinetic_particle_theory",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "KPT_003",
+      "topic_id": "1.3_kinetic_particle_theory",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "GB_001",
+      "topic_id": "1.4_gas_behavior",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "GB_002",
+      "topic_id": "1.4_gas_behavior",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "GB_003",
+      "topic_id": "1.4_gas_behavior",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "DIF_001",
+      "topic_id": "1.5_diffusion",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "DIF_002",
+      "topic_id": "1.5_diffusion",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "DIF_003",
+      "topic_id": "1.5_diffusion",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "ECM_001",
+      "topic_id": "2.1_elements_compounds_mixtures",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "ECM_002",
+      "topic_id": "2.1_elements_compounds_mixtures",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "ECM_003",
+      "topic_id": "2.1_elements_compounds_mixtures",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "AS_001",
+      "topic_id": "2.2_atomic_structure",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "AS_002",
+      "topic_id": "2.2_atomic_structure",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "AS_003",
+      "topic_id": "2.2_atomic_structure",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "ISO_001",
+      "topic_id": "2.3_isotopes",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "ISO_002",
+      "topic_id": "2.3_isotopes",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "ISO_003",
+      "topic_id": "2.3_isotopes",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "IB_001",
+      "topic_id": "2.4_ionic_bonding",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "IB_002",
+      "topic_id": "2.4_ionic_bonding",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "IB_003",
+      "topic_id": "2.4_ionic_bonding",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "CB_001",
+      "topic_id": "2.5_covalent_bonding",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "CB_002",
+      "topic_id": "2.5_covalent_bonding",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "CB_003",
+      "topic_id": "2.5_covalent_bonding",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "ABP_001",
+      "topic_id": "7.1_acid_base_properties",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "ABP_002",
+      "topic_id": "7.1_acid_base_properties",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "ABP_003",
+      "topic_id": "7.1_acid_base_properties",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "PHI_001",
+      "topic_id": "7.2_ph_and_indicators",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "PHI_002",
+      "topic_id": "7.2_ph_and_indicators",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "PHI_003",
+      "topic_id": "7.2_ph_and_indicators",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "NEU_001",
+      "topic_id": "7.3_neutralization",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "NEU_002",
+      "topic_id": "7.3_neutralization",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "NEU_003",
+      "topic_id": "7.3_neutralization",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "SP_001",
+      "topic_id": "7.4_salt_preparation",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "SP_002",
+      "topic_id": "7.4_salt_preparation",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "SP_003",
+      "topic_id": "7.4_salt_preparation",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "OC_001",
+      "topic_id": "7.5_oxides_classification",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "OC_002",
+      "topic_id": "7.5_oxides_classification",
+      "confidence": 1.0,
+      "method": "manual"
+    },
+    {
+      "question_id": "OC_003",
+      "topic_id": "7.5_oxides_classification",
+      "confidence": 1.0,
+      "method": "manual"
+    }
+  ],
+  "summary": {
+    "total_mappings": 45,
+    "unique_questions": 45,
+    "topics_covered": 15,
+    "avg_confidence": 1.0
+  }
+}

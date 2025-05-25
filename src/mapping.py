@@ -53,27 +53,61 @@ class TopicMapper:
             data = json.load(f)
         
         topics = {}
-        for topic_id, topic_data in data["chemistry_topics"].items():
-            topics[topic_id] = Topic(
-                id=topic_id,
-                title=topic_data["title"],
-                level=topic_data["level"],
-                keywords=topic_data.get("keywords", []),
-                weight=topic_data.get("weight", 1.0)
-            )
+        
+        # Handle different possible structures
+        if "chemistry_topics" in data:
+            topics_data = data["chemistry_topics"]
+        elif "topics" in data:
+            topics_data = data["topics"]
+        elif "syllabus_topics" in data:
+            topics_data = data["syllabus_topics"]
+        else:
+            # If none of the expected keys, assume the data itself is the topics
+            topics_data = data
+        
+        for topic_id, topic_data in topics_data.items():
+            # Handle cases where topic_data might be a string or dict
+            if isinstance(topic_data, str):
+                topics[topic_id] = Topic(
+                    id=topic_id,
+                    title=topic_data,
+                    level="medium",
+                    keywords=[],
+                    weight=1.0
+                )
+            else:
+                topics[topic_id] = Topic(
+                    id=topic_id,
+                    title=topic_data.get("title", topic_data.get("name", topic_id)),
+                    level=topic_data.get("level", topic_data.get("difficulty", "medium")),
+                    keywords=topic_data.get("keywords", []),
+                    weight=topic_data.get("weight", 1.0)
+                )
         return topics
     
     def _load_questions(self, path: str) -> Dict:
         """Load questions bank"""
         with open(path, 'r', encoding='utf-8') as f:
-            return json.load(f)["chemistry_questions_bank"]
+            data = json.load(f)
+        
+        # Handle different possible structures
+        if "chemistry_questions_bank" in data:
+            return data["chemistry_questions_bank"]
+        elif "questions_bank" in data:
+            return data["questions_bank"]
+        elif "questions" in data:
+            return data["questions"]
+        else:
+            # If none of the expected keys, assume the data itself is the questions
+            return data
     
     def _load_manual_mappings(self, path: str) -> Dict:
         """Load manual topic mappings if available"""
         if not path or not Path(path).exists():
             return {}
         with open(path, 'r', encoding='utf-8') as f:
-            return json.load(f).get("manual_topic_mappings", {})
+            data = json.load(f)
+            return data.get("manual_topic_mappings", data)
     
     def calculate_topic_confidence(self, question_text: str, topic: Topic) -> float:
         """Calculate confidence score for question-topic mapping"""
@@ -86,7 +120,12 @@ class TopicMapper:
                 matches += 1
         
         if not topic.keywords:
-            return 0.0
+            # If no keywords, try to match against topic title
+            title_words = topic.title.lower().split()
+            for word in title_words:
+                if len(word) > 3 and word in text_lower:
+                    matches += 1
+            return min(matches * 0.2, 1.0) if matches > 0 else 0.1
             
         # Base confidence from keyword matches
         confidence = matches / len(topic.keywords)
@@ -101,8 +140,16 @@ class TopicMapper:
     
     def map_question_to_topics(self, question_id: str, question_data: Dict) -> List[QuestionTopicMapping]:
         """Map a single question to most relevant topics"""
-        # Combine question text and options for analysis
-        question_text = f"{question_data['question']} {' '.join(question_data['options'].values())}"
+        # Handle different question structures
+        if isinstance(question_data, dict):
+            if "question" in question_data:
+                question_text = question_data["question"]
+                if "options" in question_data:
+                    question_text += " " + " ".join(question_data["options"].values())
+            else:
+                question_text = str(question_data)
+        else:
+            question_text = str(question_data)
         
         # Check for manual mapping first
         if question_id in self.manual_mappings:
@@ -130,10 +177,19 @@ class TopicMapper:
         self.mappings = []
         
         for topic_id, topic_questions in self.questions.items():
-            for question in topic_questions["questions"]:
-                question_id = question["id"]
-                mappings = self.map_question_to_topics(question_id, question)
-                self.mappings.extend(mappings)
+            # Handle different question structures
+            if isinstance(topic_questions, dict) and "questions" in topic_questions:
+                questions_list = topic_questions["questions"]
+            elif isinstance(topic_questions, list):
+                questions_list = topic_questions
+            else:
+                continue
+                
+            for question in questions_list:
+                if isinstance(question, dict) and "id" in question:
+                    question_id = question["id"]
+                    mappings = self.map_question_to_topics(question_id, question)
+                    self.mappings.extend(mappings)
     
     def aggregate_weak_questions(self, student_results: Dict[str, bool]) -> Dict[str, Dict]:
         """Aggregate weak questions by topic"""
@@ -225,26 +281,31 @@ class TopicMapper:
 if __name__ == "__main__":
     print("Topic Mapping Engine - Test Run")
     
-    # Note: Actual file paths would be used in real implementation
-    mapper = TopicMapper(
-        syllabus_path="data/syllabus_topics.json",
-        questions_path="data/past_questions_bank.json",
-        manual_mappings_path="data/manual_mappings.json"
-    )
-    
-    # Map all questions
-    mapper.map_all_questions()
-    print(f"Mapped {len(mapper.mappings)} question-topic associations")
-    
-    # Sample student results for testing
-    sample_results = {
-        "SLG_001": True, "SLG_002": False, "SLG_003": True,
-        "COS_001": False, "COS_002": True, "COS_003": False,
-        "ECM_001": True, "ECM_002": False, "ECM_003": True
-    }
-    
-    # Export results
-    mapper.export_mappings("output/question_topic_mappings.json")
-    mapper.export_weak_topics_analysis(sample_results, "output/weak_topics_analysis.json")
-    
-    print("Mapping completed successfully!")
+    try:
+        # Note: Actual file paths would be used in real implementation
+        mapper = TopicMapper(
+            syllabus_path="data/syllabus_topics.json",
+            questions_path="data/past_questions_bank.json",
+            manual_mappings_path="data/manual_mappings.json"
+        )
+        
+        # Map all questions
+        mapper.map_all_questions()
+        print(f"Mapped {len(mapper.mappings)} question-topic associations")
+        
+        # Sample student results for testing
+        sample_results = {
+            "SLG_001": True, "SLG_002": False, "SLG_003": True,
+            "COS_001": False, "COS_002": True, "COS_003": False,
+            "ECM_001": True, "ECM_002": False, "ECM_003": True
+        }
+        
+        # Export results
+        mapper.export_mappings("output/question_topic_mappings.json")
+        mapper.export_weak_topics_analysis(sample_results, "output/weak_topics_analysis.json")
+        
+        print("Mapping completed successfully!")
+        
+    except Exception as e:
+        print(f"❌ Error: {e}")
+        print("Please check your data file structure.")

@@ -1,0 +1,400 @@
+{
+  "weak_topics": {
+    "1.1_solids_liquids_gases": {
+      "title": "Properties and Structure of Solids, Liquids and Gases",
+      "total_questions": 3,
+      "correct_answers": 1,
+      "wrong_questions": [
+        "SLG_002",
+        "SLG_003"
+      ],
+      "success_rate": 0.3333333333333333,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "1.2_changes_of_state": {
+      "title": "Changes of State",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "COS_001",
+        "COS_002",
+        "COS_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "1.3_kinetic_particle_theory": {
+      "title": "Kinetic Particle Theory",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "KPT_001",
+        "KPT_002",
+        "KPT_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "1.4_gas_behavior": {
+      "title": "Gas Behavior and Properties",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "GB_001",
+        "GB_002",
+        "GB_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "1.5_diffusion": {
+      "title": "Diffusion",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "DIF_001",
+        "DIF_002",
+        "DIF_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "2.1_elements_compounds_mixtures": {
+      "title": "Elements, Compounds and Mixtures",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "ECM_001",
+        "ECM_002",
+        "ECM_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "2.2_atomic_structure": {
+      "title": "Atomic Structure",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "AS_001",
+        "AS_002",
+        "AS_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "2.3_isotopes": {
+      "title": "Isotopes",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "ISO_001",
+        "ISO_002",
+        "ISO_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "2.4_ionic_bonding": {
+      "title": "Ionic Bonding",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "IB_001",
+        "IB_002",
+        "IB_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "2.5_covalent_bonding": {
+      "title": "Covalent Bonding",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "CB_001",
+        "CB_002",
+        "CB_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "7.1_acid_base_properties": {
+      "title": "Acid and Base Properties",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "ABP_001",
+        "ABP_002",
+        "ABP_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "7.2_ph_and_indicators": {
+      "title": "pH and Indicators",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "PHI_001",
+        "PHI_002",
+        "PHI_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "7.3_neutralization": {
+      "title": "Neutralization Reactions",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "NEU_001",
+        "NEU_002",
+        "NEU_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "7.4_salt_preparation": {
+      "title": "Salt Preparation",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "SP_001",
+        "SP_002",
+        "SP_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "7.5_oxides_classification": {
+      "title": "Classification of Oxides",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "OC_001",
+        "OC_002",
+        "OC_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    }
+  },
+  "all_topics": {
+    "1.1_solids_liquids_gases": {
+      "title": "Properties and Structure of Solids, Liquids and Gases",
+      "total_questions": 3,
+      "correct_answers": 1,
+      "wrong_questions": [
+        "SLG_002",
+        "SLG_003"
+      ],
+      "success_rate": 0.3333333333333333,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "1.2_changes_of_state": {
+      "title": "Changes of State",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "COS_001",
+        "COS_002",
+        "COS_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "1.3_kinetic_particle_theory": {
+      "title": "Kinetic Particle Theory",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "KPT_001",
+        "KPT_002",
+        "KPT_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "1.4_gas_behavior": {
+      "title": "Gas Behavior and Properties",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "GB_001",
+        "GB_002",
+        "GB_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "1.5_diffusion": {
+      "title": "Diffusion",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "DIF_001",
+        "DIF_002",
+        "DIF_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "2.1_elements_compounds_mixtures": {
+      "title": "Elements, Compounds and Mixtures",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "ECM_001",
+        "ECM_002",
+        "ECM_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "2.2_atomic_structure": {
+      "title": "Atomic Structure",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "AS_001",
+        "AS_002",
+        "AS_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "2.3_isotopes": {
+      "title": "Isotopes",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "ISO_001",
+        "ISO_002",
+        "ISO_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "2.4_ionic_bonding": {
+      "title": "Ionic Bonding",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "IB_001",
+        "IB_002",
+        "IB_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "2.5_covalent_bonding": {
+      "title": "Covalent Bonding",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "CB_001",
+        "CB_002",
+        "CB_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "7.1_acid_base_properties": {
+      "title": "Acid and Base Properties",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "ABP_001",
+        "ABP_002",
+        "ABP_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "7.2_ph_and_indicators": {
+      "title": "pH and Indicators",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "PHI_001",
+        "PHI_002",
+        "PHI_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "7.3_neutralization": {
+      "title": "Neutralization Reactions",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "NEU_001",
+        "NEU_002",
+        "NEU_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "7.4_salt_preparation": {
+      "title": "Salt Preparation",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "SP_001",
+        "SP_002",
+        "SP_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    },
+    "7.5_oxides_classification": {
+      "title": "Classification of Oxides",
+      "total_questions": 3,
+      "correct_answers": 0,
+      "wrong_questions": [
+        "OC_001",
+        "OC_002",
+        "OC_003"
+      ],
+      "success_rate": 0.0,
+      "confidence_sum": 3.0,
+      "avg_confidence": 1.0
+    }
+  },
+  "summary": {
+    "total_topics_analyzed": 15,
+    "weak_topics_count": 15,
+    "overall_success_rate": 0.02222222222222222,
+    "questions_analyzed": 2
+  }
+}
