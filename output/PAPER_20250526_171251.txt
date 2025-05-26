@@ -1,0 +1,107 @@
+IGCSE Chemistry Practice Paper
+==============================
+Paper ID: PAPER_20250526_171251
+Generated: 2025-05-26T17:12:51.874588
+Time Limit: 75 minutes
+Total Points: 60
+
+INSTRUCTIONS:
+- Answer ALL questions
+- Write clearly and show your working
+- Points for each question are shown in brackets
+
+Question 1: [3 marks]
+What are the processes X, Y and Z in the state changes shown: solid ←X→ liquid ←Y→ gas ←Z→ solid?
+
+   A) X: melting, Y: condensing, Z: evaporating
+   B) X: evaporating, Y: melting, Z: freezing
+   C) X: melting, Y: freezing, Z: condensing
+   D) X: freezing, Y: evaporating, Z: condensing
+
+Question 2: [3 marks]
+Which statement about a solid, a liquid or a gas is correct?
+
+   A) A solid has a fixed shape and can be compressed.
+   B) A liquid takes the shape of the container it is in and can be compressed.
+   C) A solid has no fixed shape and cannot be compressed.
+   D) A gas takes the shape of the container it is in and can be compressed.
+
+Question 3: [3 marks]
+Which row about elements, mixtures and compounds is correct?
+
+   A) metallic element: copper, non-metallic element: methane, mixture: brass, compound: sulfur
+   B) metallic element: brass, non-metallic element: sulfur, mixture: copper, compound: methane
+   C) metallic element: copper, non-metallic element: sulfur, mixture: brass, compound: methane
+   D) metallic element: brass, non-metallic element: methane, mixture: copper, compound: sulfur
+
+Question 4: [3 marks]
+What is the melting point of substance X from the heating curve showing temperature vs time?
+
+   A) 20°C
+   B) 170°C
+   C) 240°C
+   D) 270°C
+
+Question 5: [5 marks]
+When an acid is added to an alkali, the temperature rises. Which words describe this reaction?
+
+   A) decomposition and endothermic
+   B) decomposition and exothermic
+   C) neutralisation and endothermic
+   D) neutralisation and exothermic
+
+Question 6: [5 marks]
+Which statement about an atom of fluorine, ₉¹⁹F, is correct?
+
+   A) It contains a total of 28 protons, neutrons and electrons.
+   B) It contains more protons than neutrons.
+   C) Its isotopes contain different numbers of protons.
+   D) Its nucleus contains 9 neutrons.
+
+Question 7: [5 marks]
+Which products are formed when magnesium hydroxide reacts with hydrochloric acid?
+
+   A) magnesium chloride, carbon dioxide and water
+   B) magnesium chloride, hydrogen and water
+   C) magnesium chloride and hydrogen only
+   D) magnesium chloride and water only
+
+Question 8: [5 marks]
+Which statement about ions and ionic bonds is correct?
+
+   A) Bromine atoms form negatively charged bromide ions.
+   B) Ionic bonds form between elements in Group VII of the Periodic Table.
+   C) Positive ions are formed when atoms lose protons.
+   D) Potassium iodide contains negatively charged potassium ions.
+
+Question 9: [7 marks]
+The oxides of elements X and Y are dissolved in water. X gives pH 1, Y gives pH 13. Which information is correct?
+
+   A) X oxide acidic, Y oxide basic, X metal, Y non-metal
+   B) X oxide acidic, Y oxide basic, X non-metal, Y metal
+   C) X oxide basic, Y oxide acidic, X metal, Y non-metal
+   D) X oxide basic, Y oxide acidic, X non-metal, Y metal
+
+Question 10: [7 marks]
+Why is an excess of copper(II) carbonate added when preparing copper(II) sulfate?
+
+   A) to ensure all the copper(II) carbonate has reacted
+   B) to ensure all the sulfuric acid has reacted
+   C) to increase the rate of reaction
+   D) to increase the amount of copper(II) sulfate produced
+
+Question 11: [7 marks]
+In the preparation of copper(II) sulfate crystals, why is filtration necessary?
+
+   A) to remove soluble impurities
+   B) to remove sulfuric acid
+   C) to remove the blue crystals
+   D) to remove unreacted copper(II) oxide
+
+Question 12: [7 marks]
+Which processes are part of preparing solid copper(II) sulfate? 1) crystallisation 2) distillation 3) filtration 4) titration
+
+   A) 1 and 3
+   B) 1 and 4
+   C) 2 and 3
+   D) 2 and 4

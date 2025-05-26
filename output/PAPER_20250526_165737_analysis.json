@@ -1,0 +1,67 @@
+{
+  "paper_summary": {
+    "total_questions": 12,
+    "total_points": 60,
+    "average_points_per_question": 5.0
+  },
+  "difficulty_breakdown": {
+    "count_distribution": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "points_distribution": {
+      "easy": 12,
+      "medium": 20,
+      "hard": 28
+    },
+    "percentage_by_count": {
+      "easy": 33.33333333333333,
+      "medium": 33.33333333333333,
+      "hard": 33.33333333333333
+    },
+    "percentage_by_points": {
+      "easy": 20.0,
+      "medium": 33.33333333333333,
+      "hard": 46.666666666666664
+    }
+  },
+  "topic_coverage": {
+    "Diffusion": 2,
+    "Properties and Structure of Solids, Liquids and Gases": 1,
+    "Elements, Compounds and Mixtures": 1,
+    "pH and Indicators": 1,
+    "Kinetic Particle Theory": 1,
+    "Neutralization Reactions": 1,
+    "Gas Behavior and Properties": 1,
+    "Salt Preparation": 2,
+    "Classification of Oxides": 2
+  },
+  "selection_reasons": {
+    "Balanced selection (easy)": 4,
+    "Balanced selection (medium)": 4,
+    "Balanced selection (hard)": 4
+  },
+  "paper_statistics": {
+    "generation_strategy": "balanced",
+    "config_used": {
+      "total_questions": 12,
+      "total_points": 100,
+      "difficulty_distribution": {
+        "easy": 0.4,
+        "medium": 0.4,
+        "hard": 0.2
+      },
+      "topic_focus": null,
+      "paper_type": "balanced",
+      "include_answer_key": true,
+      "time_limit_minutes": 75
+    },
+    "metadata": {
+      "generation_strategy": "balanced",
+      "algorithm_version": "1.0",
+      "topic_mapper_version": "day3",
+      "question_pool_size": 45
+    }
+  }
+}

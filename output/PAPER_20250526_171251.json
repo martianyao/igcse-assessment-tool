@@ -1,0 +1,133 @@
+{
+  "paper_id": "PAPER_20250526_171251",
+  "title": "IGCSE Chemistry Practice Paper",
+  "questions": [
+    {
+      "question_id": "COS_001",
+      "topic_id": "1.2_changes_of_state",
+      "difficulty": "easy",
+      "points": 3,
+      "selection_reason": "Balanced selection (easy)",
+      "confidence_score": 1.0
+    },
+    {
+      "question_id": "SLG_001",
+      "topic_id": "1.1_solids_liquids_gases",
+      "difficulty": "easy",
+      "points": 3,
+      "selection_reason": "Balanced selection (easy)",
+      "confidence_score": 1.0
+    },
+    {
+      "question_id": "ECM_003",
+      "topic_id": "2.1_elements_compounds_mixtures",
+      "difficulty": "easy",
+      "points": 3,
+      "selection_reason": "Balanced selection (easy)",
+      "confidence_score": 1.0
+    },
+    {
+      "question_id": "COS_003",
+      "topic_id": "1.2_changes_of_state",
+      "difficulty": "easy",
+      "points": 3,
+      "selection_reason": "Balanced selection (easy)",
+      "confidence_score": 1.0
+    },
+    {
+      "question_id": "NEU_003",
+      "topic_id": "7.3_neutralization",
+      "difficulty": "medium",
+      "points": 5,
+      "selection_reason": "Balanced selection (medium)",
+      "confidence_score": 1.3
+    },
+    {
+      "question_id": "ISO_003",
+      "topic_id": "2.3_isotopes",
+      "difficulty": "medium",
+      "points": 5,
+      "selection_reason": "Balanced selection (medium)",
+      "confidence_score": 1.2
+    },
+    {
+      "question_id": "NEU_002",
+      "topic_id": "7.3_neutralization",
+      "difficulty": "medium",
+      "points": 5,
+      "selection_reason": "Balanced selection (medium)",
+      "confidence_score": 1.3
+    },
+    {
+      "question_id": "IB_001",
+      "topic_id": "2.4_ionic_bonding",
+      "difficulty": "medium",
+      "points": 5,
+      "selection_reason": "Balanced selection (medium)",
+      "confidence_score": 1.3
+    },
+    {
+      "question_id": "OC_002",
+      "topic_id": "7.5_oxides_classification",
+      "difficulty": "hard",
+      "points": 7,
+      "selection_reason": "Balanced selection (hard)",
+      "confidence_score": 1.4
+    },
+    {
+      "question_id": "SP_002",
+      "topic_id": "7.4_salt_preparation",
+      "difficulty": "hard",
+      "points": 7,
+      "selection_reason": "Balanced selection (hard)",
+      "confidence_score": 1.4
+    },
+    {
+      "question_id": "SP_001",
+      "topic_id": "7.4_salt_preparation",
+      "difficulty": "hard",
+      "points": 7,
+      "selection_reason": "Balanced selection (hard)",
+      "confidence_score": 1.4
+    },
+    {
+      "question_id": "SP_003",
+      "topic_id": "7.4_salt_preparation",
+      "difficulty": "hard",
+      "points": 7,
+      "selection_reason": "Balanced selection (hard)",
+      "confidence_score": 1.4
+    }
+  ],
+  "config": {
+    "total_questions": 12,
+    "total_points": 100,
+    "difficulty_distribution": {
+      "easy": 0.4,
+      "medium": 0.4,
+      "hard": 0.2
+    },
+    "topic_focus": null,
+    "paper_type": "balanced",
+    "include_answer_key": true,
+    "time_limit_minutes": 75
+  },
+  "metadata": {
+    "generation_strategy": "balanced",
+    "algorithm_version": "1.0",
+    "topic_mapper_version": "day3",
+    "question_pool_size": 45
+  },
+  "generated_at": "2025-05-26T17:12:51.874588",
+  "total_points": 60,
+  "topic_coverage": {
+    "Changes of State": 2,
+    "Properties and Structure of Solids, Liquids and Gases": 1,
+    "Elements, Compounds and Mixtures": 1,
+    "Neutralization Reactions": 2,
+    "Isotopes": 1,
+    "Ionic Bonding": 1,
+    "Classification of Oxides": 1,
+    "Salt Preparation": 3
+  }
+}

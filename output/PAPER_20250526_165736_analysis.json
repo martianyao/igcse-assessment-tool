@@ -1,0 +1,66 @@
+{
+  "paper_summary": {
+    "total_questions": 10,
+    "total_points": 46,
+    "average_points_per_question": 4.6
+  },
+  "difficulty_breakdown": {
+    "count_distribution": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 2
+    },
+    "points_distribution": {
+      "easy": 12,
+      "medium": 20,
+      "hard": 14
+    },
+    "percentage_by_count": {
+      "easy": 40.0,
+      "medium": 40.0,
+      "hard": 20.0
+    },
+    "percentage_by_points": {
+      "easy": 26.08695652173913,
+      "medium": 43.47826086956522,
+      "hard": 30.434782608695656
+    }
+  },
+  "topic_coverage": {
+    "Elements, Compounds and Mixtures": 2,
+    "Changes of State": 1,
+    "Properties and Structure of Solids, Liquids and Gases": 1,
+    "Atomic Structure": 2,
+    "Gas Behavior and Properties": 1,
+    "Kinetic Particle Theory": 1,
+    "Classification of Oxides": 1,
+    "Salt Preparation": 1
+  },
+  "selection_reasons": {
+    "Balanced selection (easy)": 4,
+    "Balanced selection (medium)": 4,
+    "Balanced selection (hard)": 2
+  },
+  "paper_statistics": {
+    "generation_strategy": "balanced",
+    "config_used": {
+      "total_questions": 10,
+      "total_points": 100,
+      "difficulty_distribution": {
+        "easy": 0.4,
+        "medium": 0.4,
+        "hard": 0.2
+      },
+      "topic_focus": null,
+      "paper_type": "balanced",
+      "include_answer_key": true,
+      "time_limit_minutes": 90
+    },
+    "metadata": {
+      "generation_strategy": "balanced",
+      "algorithm_version": "1.0",
+      "topic_mapper_version": "day3",
+      "question_pool_size": 45
+    }
+  }
+}
