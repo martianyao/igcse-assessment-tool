@@ -1,0 +1,145 @@
+{
+  "generated_questions": [
+    {
+      "id": "mock_1.1_solids_liquids_gases_1",
+      "question": "What are the properties of 1.1 Solids Liquids Gases?",
+      "options": [
+        "Strong properties",
+        "Weak properties",
+        "Variable properties",
+        "No properties"
+      ],
+      "correct_answer": "A",
+      "explanation": "This demonstrates the key characteristics.",
+      "difficulty": "easy",
+      "topic_id": "1.1_solids_liquids_gases",
+      "ai_generated": true
+    },
+    {
+      "id": "mock_1.1_solids_liquids_gases_2",
+      "question": "How does 1.1 Solids Liquids Gases relate to chemical bonding?",
+      "options": [
+        "Direct relationship",
+        "Inverse relationship",
+        "No relationship",
+        "Complex relationship"
+      ],
+      "correct_answer": "B",
+      "explanation": "The relationship depends on molecular structure.",
+      "difficulty": "medium",
+      "topic_id": "1.1_solids_liquids_gases",
+      "ai_generated": true
+    },
+    {
+      "id": "mock_1.1_solids_liquids_gases_3",
+      "question": "Which statement about 1.1 Solids Liquids Gases is most accurate?",
+      "options": [
+        "Statement A",
+        "Statement B",
+        "Statement C",
+        "Statement D"
+      ],
+      "correct_answer": "C",
+      "explanation": "This statement correctly describes the concept.",
+      "difficulty": "hard",
+      "topic_id": "1.1_solids_liquids_gases",
+      "ai_generated": true
+    },
+    {
+      "id": "mock_1.2_changes_of_state_1",
+      "question": "What are the properties of 1.2 Changes Of State?",
+      "options": [
+        "Strong properties",
+        "Weak properties",
+        "Variable properties",
+        "No properties"
+      ],
+      "correct_answer": "A",
+      "explanation": "This demonstrates the key characteristics.",
+      "difficulty": "easy",
+      "topic_id": "1.2_changes_of_state",
+      "ai_generated": true
+    },
+    {
+      "id": "mock_1.2_changes_of_state_2",
+      "question": "How does 1.2 Changes Of State relate to chemical bonding?",
+      "options": [
+        "Direct relationship",
+        "Inverse relationship",
+        "No relationship",
+        "Complex relationship"
+      ],
+      "correct_answer": "B",
+      "explanation": "The relationship depends on molecular structure.",
+      "difficulty": "medium",
+      "topic_id": "1.2_changes_of_state",
+      "ai_generated": true
+    },
+    {
+      "id": "mock_1.2_changes_of_state_3",
+      "question": "Which statement about 1.2 Changes Of State is most accurate?",
+      "options": [
+        "Statement A",
+        "Statement B",
+        "Statement C",
+        "Statement D"
+      ],
+      "correct_answer": "C",
+      "explanation": "This statement correctly describes the concept.",
+      "difficulty": "hard",
+      "topic_id": "1.2_changes_of_state",
+      "ai_generated": true
+    },
+    {
+      "id": "mock_1.3_kinetic_particle_theory_1",
+      "question": "What are the properties of 1.3 Kinetic Particle Theory?",
+      "options": [
+        "Strong properties",
+        "Weak properties",
+        "Variable properties",
+        "No properties"
+      ],
+      "correct_answer": "A",
+      "explanation": "This demonstrates the key characteristics.",
+      "difficulty": "easy",
+      "topic_id": "1.3_kinetic_particle_theory",
+      "ai_generated": true
+    },
+    {
+      "id": "mock_1.3_kinetic_particle_theory_2",
+      "question": "How does 1.3 Kinetic Particle Theory relate to chemical bonding?",
+      "options": [
+        "Direct relationship",
+        "Inverse relationship",
+        "No relationship",
+        "Complex relationship"
+      ],
+      "correct_answer": "B",
+      "explanation": "The relationship depends on molecular structure.",
+      "difficulty": "medium",
+      "topic_id": "1.3_kinetic_particle_theory",
+      "ai_generated": true
+    },
+    {
+      "id": "mock_1.3_kinetic_particle_theory_3",
+      "question": "Which statement about 1.3 Kinetic Particle Theory is most accurate?",
+      "options": [
+        "Statement A",
+        "Statement B",
+        "Statement C",
+        "Statement D"
+      ],
+      "correct_answer": "C",
+      "explanation": "This statement correctly describes the concept.",
+      "difficulty": "hard",
+      "topic_id": "1.3_kinetic_particle_theory",
+      "ai_generated": true
+    }
+  ],
+  "total_questions": 9,
+  "metadata": {
+    "provider": "mock",
+    "exported_at": "2025-05-26T22:24:14.348565",
+    "version": "1.0"
+  }
+}
