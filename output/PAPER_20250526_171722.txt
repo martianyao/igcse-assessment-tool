@@ -1,0 +1,91 @@
+IGCSE Chemistry Practice Paper
+==============================
+Paper ID: PAPER_20250526_171722
+Generated: 2025-05-26T17:17:22.381665
+Time Limit: 60 minutes
+Total Points: 46
+
+INSTRUCTIONS:
+- Answer ALL questions
+- Write clearly and show your working
+- Points for each question are shown in brackets
+
+Question 1: [3 marks]
+Which two diagrams show the states of matter before and after the sublimation of carbon dioxide?
+
+   A) 2 to 1
+   B) 2 to 3
+   C) 3 to 1
+   D) 3 to 2
+
+Question 2: [3 marks]
+Which statement about the molecules in ice, water or steam is correct?
+
+   A) The H2O molecules are on average closest together in steam.
+   B) The H2O molecules are on average furthest apart in water.
+   C) The H2O molecules in steam have the second highest average velocity.
+   D) The H2O molecules in ice are able to vibrate.
+
+Question 3: [3 marks]
+What is the melting point of substance X from the heating curve showing temperature vs time?
+
+   A) 20°C
+   B) 170°C
+   C) 240°C
+   D) 270°C
+
+Question 4: [3 marks]
+Which statement about a solid, a liquid or a gas is correct?
+
+   A) A solid has a fixed shape and can be compressed.
+   B) A liquid takes the shape of the container it is in and can be compressed.
+   C) A solid has no fixed shape and cannot be compressed.
+   D) A gas takes the shape of the container it is in and can be compressed.
+
+Question 5: [5 marks]
+Which statement about an atom of fluorine, ₉¹⁹F, is correct?
+
+   A) It contains a total of 28 protons, neutrons and electrons.
+   B) It contains more protons than neutrons.
+   C) Its isotopes contain different numbers of protons.
+   D) Its nucleus contains 9 neutrons.
+
+Question 6: [5 marks]
+What are the relative charge and relative mass of an electron?
+
+   A) charge: 0, mass: 1
+   B) charge: 0, mass: 1/2000
+   C) charge: -1, mass: 1
+   D) charge: -1, mass: 1/2000
+
+Question 7: [5 marks]
+Elements P and Q have the same number of electron shells. An atom of Q has more electrons in its outer shell than P. Which statements are correct?
+
+   A) 1 and 3: P and Q are in same group; P forms positive ions more easily
+   B) 1 and 4: P and Q are in same group; Q's oxide is more basic
+   C) 2 and 3: P and Q are in same period; P forms positive ions more easily
+   D) 2 and 4: P and Q are in same period; Q's oxide is more basic
+
+Question 8: [5 marks]
+Which products are formed when magnesium hydroxide reacts with hydrochloric acid?
+
+   A) magnesium chloride, carbon dioxide and water
+   B) magnesium chloride, hydrogen and water
+   C) magnesium chloride and hydrogen only
+   D) magnesium chloride and water only
+
+Question 9: [7 marks]
+The oxides of elements X and Y are dissolved in water. X gives pH 1, Y gives pH 13. Which information is correct?
+
+   A) X oxide acidic, Y oxide basic, X metal, Y non-metal
+   B) X oxide acidic, Y oxide basic, X non-metal, Y metal
+   C) X oxide basic, Y oxide acidic, X metal, Y non-metal
+   D) X oxide basic, Y oxide acidic, X non-metal, Y metal
+
+Question 10: [7 marks]
+Which oxide is classified as amphoteric?
+
+   A) aluminium oxide
+   B) calcium oxide
+   C) copper(II) oxide
+   D) nitrogen oxide

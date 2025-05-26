@@ -1,0 +1,115 @@
+{
+  "paper_id": "PAPER_20250526_171722",
+  "title": "IGCSE Chemistry Practice Paper",
+  "questions": [
+    {
+      "question_id": "COS_002",
+      "topic_id": "1.2_changes_of_state",
+      "difficulty": "easy",
+      "points": 3,
+      "selection_reason": "Balanced selection (easy)",
+      "confidence_score": 1.0
+    },
+    {
+      "question_id": "SLG_002",
+      "topic_id": "1.1_solids_liquids_gases",
+      "difficulty": "easy",
+      "points": 3,
+      "selection_reason": "Balanced selection (easy)",
+      "confidence_score": 1.0
+    },
+    {
+      "question_id": "COS_003",
+      "topic_id": "1.2_changes_of_state",
+      "difficulty": "easy",
+      "points": 3,
+      "selection_reason": "Balanced selection (easy)",
+      "confidence_score": 1.0
+    },
+    {
+      "question_id": "SLG_001",
+      "topic_id": "1.1_solids_liquids_gases",
+      "difficulty": "easy",
+      "points": 3,
+      "selection_reason": "Balanced selection (easy)",
+      "confidence_score": 1.0
+    },
+    {
+      "question_id": "ISO_003",
+      "topic_id": "2.3_isotopes",
+      "difficulty": "medium",
+      "points": 5,
+      "selection_reason": "Balanced selection (medium)",
+      "confidence_score": 1.2
+    },
+    {
+      "question_id": "AS_001",
+      "topic_id": "2.2_atomic_structure",
+      "difficulty": "medium",
+      "points": 5,
+      "selection_reason": "Balanced selection (medium)",
+      "confidence_score": 1.3
+    },
+    {
+      "question_id": "AS_003",
+      "topic_id": "2.2_atomic_structure",
+      "difficulty": "medium",
+      "points": 5,
+      "selection_reason": "Balanced selection (medium)",
+      "confidence_score": 1.3
+    },
+    {
+      "question_id": "NEU_002",
+      "topic_id": "7.3_neutralization",
+      "difficulty": "medium",
+      "points": 5,
+      "selection_reason": "Balanced selection (medium)",
+      "confidence_score": 1.3
+    },
+    {
+      "question_id": "OC_002",
+      "topic_id": "7.5_oxides_classification",
+      "difficulty": "hard",
+      "points": 7,
+      "selection_reason": "Balanced selection (hard)",
+      "confidence_score": 1.4
+    },
+    {
+      "question_id": "OC_003",
+      "topic_id": "7.5_oxides_classification",
+      "difficulty": "hard",
+      "points": 7,
+      "selection_reason": "Balanced selection (hard)",
+      "confidence_score": 1.4
+    }
+  ],
+  "config": {
+    "total_questions": 10,
+    "total_points": 100,
+    "difficulty_distribution": {
+      "easy": 0.4,
+      "medium": 0.4,
+      "hard": 0.2
+    },
+    "topic_focus": null,
+    "paper_type": "balanced",
+    "include_answer_key": true,
+    "time_limit_minutes": 60
+  },
+  "metadata": {
+    "generation_strategy": "balanced",
+    "algorithm_version": "1.0",
+    "topic_mapper_version": "day3",
+    "question_pool_size": 45
+  },
+  "generated_at": "2025-05-26T17:17:22.381665",
+  "total_points": 46,
+  "topic_coverage": {
+    "Changes of State": 2,
+    "Properties and Structure of Solids, Liquids and Gases": 2,
+    "Isotopes": 1,
+    "Atomic Structure": 2,
+    "Neutralization Reactions": 1,
+    "Classification of Oxides": 2
+  }
+}
