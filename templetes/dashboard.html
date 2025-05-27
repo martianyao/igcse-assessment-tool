@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - IGCSE Chemistry Assessment</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --danger-color: #e74c3c;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .dashboard-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .icon-students {
+            color: var(--success-color);
+        }
+
+        .icon-classes {
+            color: var(--secondary-color);
+        }
+
+        .icon-assessments {
+            color: var(--warning-color);
+        }
+
+        .icon-ai {
+            color: var(--danger-color);
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            border: none;
+            padding: 1rem 1.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-weight: 500;
+        }
+
+        .quick-action-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .quick-action-card:hover {
+            transform: translateY(-5px);
+            color: white;
+            text-decoration: none;
+        }
+
+        .ai-insight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .table-modern {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-modern thead {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .table-modern tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-flask me-2"></i>
+                IGCSE Chemistry Assessment
+            </a>
+
+            <div class="navbar-nav ms-auto">
+                <span class="navbar-text me-3">
+                    <i class="fas fa-user me-1"></i>
+                    Welcome, Demo Teacher
+                </span>
+                <a class="nav-link" href="/logout">
+                    <i class="fas fa-sign-out-alt me-1"></i>
+                    Logout
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header fade-in">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h1 class="mb-2">
+                            <i class="fas fa-tachometer-alt me-3"></i>
+                            Teacher Dashboard
+                        </h1>
+                        <p class="mb-0 opacity-75">
+                            Welcome back! Here's what's happening with your classes.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <div class="badge"
+                            style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px;">
+                            <i class="fas fa-robot me-1"></i>
+                            AI-Powered Analytics
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Overview -->
+        <div class="row mb-4">
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="stat-card fade-in">
+                    <i class="fas fa-users stat-icon icon-students"></i>
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Total Students</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="stat-card fade-in">
+                    <i class="fas fa-chalkboard-teacher stat-icon icon-classes"></i>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Active Classes</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="stat-card fade-in">
+                    <i class="fas fa-clipboard-list stat-icon icon-assessments"></i>
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Assessments Created</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="stat-card fade-in">
+                    <i class="fas fa-robot stat-icon icon-ai"></i>
+                    <div class="stat-number">AI</div>
+                    <div class="stat-label">Analysis Ready</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="row mb-4">
+            <div class="col-lg-3 col-md-6 mb-3">
+                <a href="/create_class" class="quick-action-card fade-in">
+                    <i class="fas fa-plus-circle fa-2x mb-2"></i>
+                    <h5>Create Class</h5>
+                    <p class="mb-0">Add a new student class</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <a href="/create_assessment" class="quick-action-card fade-in">
+                    <i class="fas fa-file-plus fa-2x mb-2"></i>
+                    <h5>New Assessment</h5>
+                    <p class="mb-0">Create an assessment</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <a href="/enhanced_input_results" class="quick-action-card fade-in">
+                    <i class="fas fa-chart-line fa-2x mb-2"></i>
+                    <h5>Comprehensive Analysis</h5>
+                    <p class="mb-0">Input engagement & attainment data</p>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <a href="#" onclick="viewAnalytics()" class="quick-action-card fade-in">
+                    <i class="fas fa-robot fa-2x mb-2"></i>
+                    <h5>AI Insights</h5>
+                    <p class="mb-0">View AI-powered analytics</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Recent Assessments -->
+            <div class="col-lg-8">
+                <div class="card fade-in">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-clipboard-list me-2"></i>
+                            Recent Assessments
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-modern">
+                                <thead>
+                                    <tr>
+                                        <th>Assessment</th>
+                                        <th>Class</th>
+                                        <th>Created</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <strong>Unit 1 Test - States of Matter</strong>
+                                            <br>
+                                            <small class="text-muted">20 questions</small>
+                                        </td>
+                                        <td>Year 10 Chemistry A</td>
+                                        <td>2024-01-15</td>
+                                        <td>
+                                            <span class="badge bg-success">Active</span>
+                                        </td>
+                                        <td>
+                                            <a href="/enhanced_input_results" class="btn btn-sm btn-primary me-1">
+                                                <i class="fas fa-chart-line"></i> Analysis
+                                            </a>
+                                            <a href="#" class="btn btn-sm btn-success">
+                                                <i class="fas fa-eye"></i> View
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Chemical Bonding Quiz</strong>
+                                            <br>
+                                            <small class="text-muted">15 questions</small>
+                                        </td>
+                                        <td>Year 10 Chemistry B</td>
+                                        <td>2024-01-12</td>
+                                        <td>
+                                            <span class="badge bg-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <a href="/enhanced_input_results" class="btn btn-sm btn-primary me-1">
+                                                <i class="fas fa-chart-line"></i> Analysis
+                                            </a>
+                                            <a href="#" class="btn btn-sm btn-success">
+                                                <i class="fas fa-eye"></i> View
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Atomic Structure Test</strong>
+                                            <br>
+                                            <small class="text-muted">25 questions</small>
+                                        </td>
+                                        <td>Year 11 Chemistry</td>
+                                        <td>2024-01-10</td>
+                                        <td>
+                                            <span class="badge bg-success">Active</span>
+                                        </td>
+                                        <td>
+                                            <a href="/enhanced_input_results" class="btn btn-sm btn-primary me-1">
+                                                <i class="fas fa-chart-line"></i> Analysis
+                                            </a>
+                                            <a href="#" class="btn btn-sm btn-success">
+                                                <i class="fas fa-eye"></i> View
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Classes & AI Insights -->
+            <div class="col-lg-4">
+                <!-- Your Classes -->
+                <div class="card fade-in mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-users me-2"></i>
+                            Your Classes
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3 p-2 bg-light rounded">
+                            <div>
+                                <strong>Year 10 Chemistry A</strong>
+                                <br>
+                                <small class="text-muted">12 students</small>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3 p-2 bg-light rounded">
+                            <div>
+                                <strong>Year 10 Chemistry B</strong>
+                                <br>
+                                <small class="text-muted">15 students</small>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3 p-2 bg-light rounded">
+                            <div>
+                                <strong>Year 11 Chemistry</strong>
+                                <br>
+                                <small class="text-muted">18 students</small>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Insights -->
+                <div class="ai-insight-card fade-in">
+                    <h5 class="mb-3">
+                        <i class="fas fa-robot me-2"></i>
+                        AI Insights
+                    </h5>
+                    <div class="mb-3">
+                        <i class="fas fa-lightbulb me-2"></i>
+                        <strong>Day 6 Feature:</strong>
+                        <p class="mb-0 mt-1 opacity-75">
+                            Comprehensive analysis system now combines engagement rates (1-9) with attainment analysis
+                            for deeper insights.
+                        </p>
+                    </div>
+                    <div class="mb-3">
+                        <i class="fas fa-chart-trending-up me-2"></i>
+                        <strong>New Capabilities:</strong>
+                        <p class="mb-0 mt-1 opacity-75">
+                            • Engagement evidence tracking<br>
+                            • Preparation vs. in-class analysis<br>
+                            • IGCSE grade predictions
+                        </p>
+                    </div>
+                    <a href="/enhanced_input_results" class="btn btn-light btn-sm">
+                        <i class="fas fa-rocket me-1"></i>
+                        Try Comprehensive Analysis
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Chart -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card fade-in">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-chart-line me-2"></i>
+                            Class Performance Overview
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div style="position: relative; height: 300px;">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeAnimations();
+            initializeChart();
+        });
+
+        function initializeAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    el.style.transition = 'all 0.6s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }
+
+        function initializeChart() {
+            const canvas = document.getElementById('performanceChart');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+
+            // Sample data showing engagement vs performance correlation
+            const data = {
+                labels: ['Unit 1: States of Matter', 'Unit 2: Atomic Structure', 'Unit 3: Chemical Bonding', 'Unit 4: Reactions'],
+                datasets: [
+                    {
+                        label: 'Average Test Score (%)',
+                        data: [78, 82, 79, 85],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'Average Engagement (1-9)',
+                        data: [6.2, 7.1, 6.8, 7.5],
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                        tension: 0.4,
+                        fill: false,
+                        yAxisID: 'y1'
+                    }
+                ]
+            };
+
+            const config = {
+                type: 'line',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Performance vs. Engagement Correlation'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Test Score (%)'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            min: 0,
+                            max: 9,
+                            title: {
+                                display: true,
+                                text: 'Engagement Level (1-9)'
+                            },
+                            grid: {
+                                drawOnChartArea: false,
+                            },
+                        }
+                    }
+                }
+            };
+
+            new Chart(ctx, config);
+        }
+
+        // Interactive functions
+        function viewAnalytics() {
+            alert(`🤖 AI Analytics Dashboard
+
+📊 Available Insights:
+• Engagement vs. Performance Correlation
+• IGCSE Grade Predictions
+• Risk Factor Analysis
+• Intervention Recommendations
+
+🎯 Day 6 Features:
+• 1-9 Engagement Scale Analysis
+• Preparation vs. In-Class Performance
+• Evidence-Based Assessment
+• Comprehensive Student Profiling
+
+Click "Comprehensive Analysis" to try the new system!`);
+        }
+
+        // Auto-refresh simulation
+        setInterval(() => {
+            console.log('Dashboard data refreshed...');
+        }, 300000); // 5 minutes
+    </script>
+</body>
+
+</html>
