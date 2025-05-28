@@ -1,0 +1,25 @@
+# Development dependencies
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-flask>=1.2.0
+pytest-xdist>=3.0.0
+black>=22.0.0
+isort>=5.10.0
+ruff>=0.0.290
+mypy>=1.0.0
+bandit>=1.7.0
+pre-commit>=2.20.0
+coverage-badge>=1.1.0
+
+# Documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
+myst-parser>=0.18.0
+
+# Performance testing
+locust>=2.0.0
+
+# Visualization dependencies
+matplotlib>=3.5.0
+seaborn>=0.11.0
+reportlab>=3.6.0
