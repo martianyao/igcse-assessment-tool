@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Practice - {{ student.name }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .practice-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .question-card {
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+
+        .correct-answer {
+            background-color: #d4edda !important;
+            border: 2px solid #28a745;
+        }
+
+        .incorrect-answer {
+            background-color: #f8d7da !important;
+            border: 2px solid #dc3545;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #e7f3ff;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+
+        .topic-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <!-- Navigation -->
+        <div class="mb-4">
+            <a href="{{ url_for('personalized_report', assessment_id=assessment.id) }}" class="btn btn-secondary">← Back
+                to Report</a>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-outline-secondary">📊 Dashboard</a>
+            <button onclick="window.print()" class="btn btn-primary">🖨️ Print Practice</button>
+        </div>
+
+        <!-- Practice Header -->
+        <div class="practice-header">
+            <h1>🎯 Personalized Chemistry Practice</h1>
+            <h3>{{ student.name }} - Focusing on Your Weak Areas</h3>
+            <p class="mb-0">10 Questions Generated Based on Your Assessment</p>
+        </div>
+
+        <!-- Focus Areas -->
+        <div class="alert alert-info mb-4">
+            <h6>📚 This Practice Focuses On:</h6>
+            <div class="d-flex flex-wrap gap-2">
+                {% for topic in weak_topics %}
+                <span class="badge bg-primary">{{ topic|replace('_', ' ')|title }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Questions -->
+        <form id="practice-form">
+            {% for question in questions %}
+            <div class="question-card card position-relative" data-question="{{ question.number }}">
+                <span class="topic-badge badge bg-secondary">
+                    {% if question.topic %}
+                    {{ question.topic|replace('_', ' ')|title }}
+                    {% else %}
+                    Chemistry
+                    {% endif %}
+                </span>
+                <div class="card-body">
+                    <h5 class="card-title">Question {{ question.number }}</h5>
+                    <p class="card-text">{{ question.question }}</p>
+
+                    <div class="options">
+                        {% for option in question.options %}
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="q{{ question.number }}"
+                                id="q{{ question.number }}_{{ loop.index }}" value="{{ option[0] }}"
+                                data-correct="{{ question.correct }}">
+                            <label class="form-check-label" for="q{{ question.number }}_{{ loop.index }}">
+                                {{ option }}
+                            </label>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="mt-3">
+                        <button type="button" class="btn btn-sm btn-outline-primary"
+                            onclick="checkAnswer({{ question.number }})">
+                            Check Answer
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-info"
+                            onclick="showExplanation({{ question.number }})">
+                            Show Explanation
+                        </button>
+                    </div>
+
+                    <div class="explanation" id="explanation-{{ question.number }}">
+                        <strong>Correct Answer:</strong> {{ question.correct }}<br>
+                        <strong>Explanation:</strong> {{ question.explanation }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </form>
+
+        <!-- Submit Button -->
+        <div class="text-center my-4">
+            <button type="button" class="btn btn-lg btn-success" onclick="submitPractice()">
+                ✅ Submit Practice & View Results
+            </button>
+        </div>
+
+        <!-- Results Modal -->
+        <div class="modal fade" id="resultsModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">🎉 Practice Results</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h2 id="scoreDisplay">0%</h2>
+                        <p id="scoreText">0/10 Correct</p>
+                        <div id="scoreMessage" class="alert mt-3"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Review Answers</button>
+                        <a href="{{ url_for('generate_personalized_practice', assessment_id=assessment.id) }}"
+                            class="btn btn-primary">New Practice</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkAnswer(questionNum) {
+            const selected = document.querySelector(`input[name="q${questionNum}"]:checked`);
+            if (!selected) {
+                alert('Please select an answer first!');
+                return;
+            }
+
+            const correct = selected.dataset.correct;
+            const selectedValue = selected.value;
+
+            // Clear previous styling
+            document.querySelectorAll(`input[name="q${questionNum}"]`).forEach(input => {
+                input.parentElement.classList.remove('correct-answer', 'incorrect-answer');
+            });
+
+            // Apply styling
+            if (selectedValue === correct) {
+                selected.parentElement.classList.add('correct-answer');
+                alert('✅ Correct!');
+            } else {
+                selected.parentElement.classList.add('incorrect-answer');
+                // Show correct answer
+                document.querySelectorAll(`input[name="q${questionNum}"]`).forEach(input => {
+                    if (input.value === correct) {
+                        input.parentElement.classList.add('correct-answer');
+                    }
+                });
+                alert('❌ Incorrect. The correct answer is ' + correct);
+            }
+
+            showExplanation(questionNum);
+        }
+
+        function showExplanation(questionNum) {
+            const explanation = document.getElementById(`explanation-${questionNum}`);
+            explanation.style.display = 'block';
+        }
+
+        function submitPractice() {
+            let correct = 0;
+            const total = {{ questions| length
+        }};
+
+        // Calculate score
+        for (let i = 1; i <= total; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selected && selected.value === selected.dataset.correct) {
+                correct++;
+            }
+        }
+
+        const percentage = Math.round((correct / total) * 100);
+
+        // Display results
+        document.getElementById('scoreDisplay').textContent = percentage + '%';
+        document.getElementById('scoreText').textContent = `${correct}/${total} Correct`;
+
+        // Set message based on score
+        const messageEl = document.getElementById('scoreMessage');
+        if (percentage >= 80) {
+            messageEl.className = 'alert alert-success';
+            messageEl.textContent = '🌟 Excellent! You\'ve shown great improvement!';
+        } else if (percentage >= 60) {
+            messageEl.className = 'alert alert-info';
+            messageEl.textContent = '👍 Good effort! Keep practicing.';
+        } else {
+            messageEl.className = 'alert alert-warning';
+            messageEl.textContent = '📚 More practice needed. Review the explanations.';
+        }
+
+        // Show modal
+        const modal = new bootstrap.Modal(document.getElementById('resultsModal'));
+        modal.show();
+        }
+    </script>
+</body>
+
+</html>
