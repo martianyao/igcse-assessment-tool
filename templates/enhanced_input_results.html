@@ -651,3 +651,143 @@ Ready for full implementation!`);
 </body>
 
 </html>
+<!-- Add this JavaScript modification to your existing enhanced_input_results.html -->
+<!-- Replace the generateAnalysis() function with this updated version -->
+
+<script>
+    function generateAnalysis() {
+        // Collect all form data
+        const studentId = document.getElementById('studentSelect').value;
+        const engagementRate = document.querySelector('input[name="engagement"]:checked')?.value || 5;
+
+        // Collect quiz answers
+        const quizAnswers = {};
+        for (let i = 1; i <= 10; i++) {
+            const cell = document.getElementById(`q${i}`);
+            if (cell.textContent === '✓') {
+                quizAnswers[i.toString()] = 'correct';
+            } else if (cell.textContent === '✗') {
+                quizAnswers[i.toString()] = 'incorrect';
+            }
+        }
+
+        // Collect engagement evidence
+        const engagementEvidence = {
+            questioning: document.getElementById('questioning').checked,
+            answering: document.getElementById('answering').checked,
+            focus: document.getElementById('focus').checked,
+            activity: document.getElementById('activity').checked
+        };
+
+        // Get attainment levels
+        const preparationOutcome = document.querySelector('input[name="preparation"]:checked')?.value || 'developing';
+        const inClassPractice = document.querySelector('input[name="practice"]:checked')?.value || 'developing';
+
+        // Get notes
+        const notes = document.getElementById('notes').value;
+
+        // Validate data
+        if (!studentId) {
+            alert('Please select a student');
+            return;
+        }
+
+        if (Object.keys(quizAnswers).length === 0) {
+            alert('Please mark at least one quiz answer');
+            return;
+        }
+
+        // Show loading state
+        const button = event.target;
+        button.disabled = true;
+        button.innerHTML = '⏳ Generating Analysis...';
+
+        // Prepare data for submission
+        const assessmentData = {
+            student_id: studentId,
+            engagement_rate: parseInt(engagementRate),
+            engagement_evidence: engagementEvidence,
+            preparation_outcome: preparationOutcome,
+            in_class_practice: inClassPractice,
+            quiz_answers: quizAnswers,
+            notes: notes
+        };
+
+        // Submit to API
+        fetch('/api/submit_comprehensive_assessment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(assessmentData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Redirect to personalized report
+                    window.location.href = data.redirect_url;
+                } else {
+                    alert('Error generating analysis: ' + (data.error || 'Unknown error'));
+                    button.disabled = false;
+                    button.innerHTML = '🤖 Generate AI Performance Report';
+                }
+            })
+            .catch(error => {
+                alert('Error: ' + error.message);
+                button.disabled = false;
+                button.innerHTML = '🤖 Generate AI Performance Report';
+            });
+    }
+
+    // Also update the fillDemoData function to use the new API
+    function fillDemoData() {
+        fetch('/api/quick_demo_data')
+            .then(response => response.json())
+            .then(data => {
+                // Set student
+                if (data.student_id) {
+                    document.getElementById('studentSelect').value = data.student_id;
+                }
+
+                // Set engagement rate
+                if (data.engagement_rate) {
+                    document.querySelector(`input[name="engagement"][value="${data.engagement_rate}"]`).checked = true;
+                    updateEngagementDisplay();
+                }
+
+                // Set quiz answers
+                if (data.quiz_answers) {
+                    for (const [qNum, result] of Object.entries(data.quiz_answers)) {
+                        const cell = document.getElementById(`q${qNum}`);
+                        if (cell) {
+                            if (result === 'correct') {
+                                cell.textContent = '✓';
+                                cell.className = 'text-center text-success';
+                            } else {
+                                cell.textContent = '✗';
+                                cell.className = 'text-center text-danger';
+                            }
+                        }
+                    }
+                    updateScore();
+                }
+
+                // Set engagement evidence
+                if (data.engagement_evidence) {
+                    document.getElementById('questioning').checked = data.engagement_evidence.questioning;
+                    document.getElementById('answering').checked = data.engagement_evidence.answering;
+                    document.getElementById('focus').checked = data.engagement_evidence.focus;
+                    document.getElementById('activity').checked = data.engagement_evidence.activity;
+                }
+
+                // Set attainment levels
+                if (data.preparation_outcome) {
+                    document.querySelector(`input[name="preparation"][value="${data.preparation_outcome}"]`).checked = true;
+                }
+                if (data.in_class_practice) {
+                    document.querySelector(`input[name="practice"][value="${data.in_class_practice}"]`).checked = true;
+                }
+            })
+            .catch(error => console.error('Error loading demo data:', error));
+    }
+</script>

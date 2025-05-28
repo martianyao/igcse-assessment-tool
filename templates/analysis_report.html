@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Analysis Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .analysis-card { margin-bottom: 20px; }
+        .metric-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .prediction-card { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
+        .recommendation-card { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; }
+        @media print { .no-print { display: none !important; } }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Navigation -->
+        <div class="no-print mb-3">
+            <a href="/dashboard" class="btn btn-secondary">← Back to Dashboard</a>
+            <a href="/enhanced_input_results" class="btn btn-outline-primary">📝 New Analysis</a>
+            <button onclick="window.print()" class="btn btn-success">🖨️ Print Report</button>
+        </div>
+        
+        <!-- Header -->
+        <div class="text-center mb-4">
+            <h1>🧪 IGCSE Chemistry Assessment Analysis</h1>
+            <p class="text-muted">Comprehensive Performance Report</p>
+            <hr>
+        </div>
+        
+        <!-- Student Info -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">👨‍🎓 Student Information</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Name:</strong> {{ student_name or 'Demo Student' }}</p>
+                        <p><strong>Date:</strong> {{ analysis_date or moment().format('YYYY-MM-DD') }}</p>
+                        <p><strong>Assessment:</strong> {{ assessment_title or 'IGCSE Chemistry Comprehensive Assessment' }}</p>
+                        <p><strong>Class:</strong> {{ student_class or 'Year 11 Chemistry A' }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card metric-card">
+                    <div class="card-header">
+                        <h5 class="mb-0">📊 Overall Performance</h5>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="text-center">{{ score or '76' }}%</h2>
+                        <p class="text-center mb-0">{{ correct_answers or '15' }}/{{ total_questions or '20' }} Questions Correct</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Key Metrics -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h3 class="text-primary">{{ engagement_rate or '7' }}/9</h3>
+                        <p class="mb-0">Engagement Rate</p>
+                        <small class="text-muted">{{ engagement_description or 'High Engagement' }}</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h4 class="text-success">{{ preparation_outcome or 'Secure' }}</h4>
+                        <p class="mb-0">Preparation</p>
+                        <small class="text-muted">Homework & Revision</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h4 class="text-info">{{ in_class_practice or 'Developing' }}</h4>
+                        <p class="mb-0">In-Class Practice</p>
+                        <small class="text-muted">Activity Performance</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h4 class="text-warning">{{ predicted_grade or 'Grade 7' }}</h4>
+                        <p class="mb-0">IGCSE Prediction</p>
+                        <small class="text-muted">85% Confidence</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detailed Analysis -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card analysis-card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">✅ Strengths Identified</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Strong foundational understanding of atomic structure</li>
+                            <li>Excellent engagement in class discussions</li>
+                            <li>Consistent preparation and homework completion</li>
+                            <li>Good mathematical skills applied to calculations</li>
+                            <li>Active participation in practical activities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card analysis-card">
+                    <div class="card-header bg-warning text-white">
+                        <h5 class="mb-0">🎯 Areas for Improvement</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Chemical bonding concepts (ionic vs covalent)</li>
+                            <li>Balancing chemical equations</li>
+                            <li>Reaction kinetics and rate calculations</li>
+                            <li>Acid-base equilibrium principles</li>
+                            <li>Organic chemistry nomenclature</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- AI Recommendations -->
+        <div class="card recommendation-card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">🤖 AI-Powered Recommendations</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6>📚 Study Plan</h6>
+                        <ul>
+                            <li>Focus 40% time on bonding concepts</li>
+                            <li>Practice 30 equation balancing problems</li>
+                            <li>Review kinetics with past papers</li>
+                            <li>Create mind maps for organic chemistry</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>📝 Practice Recommendations</h6>
+                        <ul>
+                            <li>Complete 2 past papers per week</li>
+                            <li>Focus on calculation questions</li>
+                            <li>Practice drawing diagrams</li>
+                            <li>Use flashcards for key terms</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>⏰ Timeline</h6>
+                        <ul>
+                            <li>Week 1-2: Bonding fundamentals</li>
+                            <li>Week 3-4: Equation practice</li>
+                            <li>Week 5-6: Kinetics & equilibrium</li>
+                            <li>Week 7-8: Comprehensive review</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Topic Performance -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">📊 Topic Performance Breakdown</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Strong Topics (>80%)</h6>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" style="width: 88%">Atomic Structure (88%)</div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" style="width: 85%">Stoichiometry (85%)</div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" style="width: 82%">States of Matter (82%)</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Needs Improvement (<70%)</h6>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-warning" style="width: 65%">Chemical Bonding (65%)</div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-danger" style="width: 58%">Reaction Kinetics (58%)</div>
+                        </div>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-warning" style="width: 62%">Acids & Bases (62%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Items -->
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">🎯 Next Steps</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6>Immediate Actions</h6>
+                        <ul>
+                            <li>Schedule extra help session</li>
+                            <li>Create bonding concept map</li>
+                            <li>Practice 10 kinetics problems</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>This Week</h6>
+                        <ul>
+                            <li>Complete practice paper</li>
+                            <li>Review class notes</li>
+                            <li>Attend study group</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>Before Next Assessment</h6>
+                        <ul>
+                            <li>Master weak topics</li>
+                            <li>Take mock examination</li>
+                            <li>Get feedback from teacher</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="text-center no-print mb-4">
+            <a href="/generate_paper" class="btn btn-primary btn-lg me-3">📝 Generate Practice Paper</a>
+            <a href="/enhanced_input_results" class="btn btn-success btn-lg me-3">🔄 New Assessment</a>
+            <button onclick="window.print()" class="btn btn-info btn-lg">🖨️ Print Report</button>
+        </div>
+        
+        <!-- Footer -->
+        <hr>
+        <div class="text-center text-muted">
+            <p><small>Generated by IGCSE Chemistry Assessment Tool | AI-Powered Analysis</small></p>
+        </div>
+    </div>
+</body>
+</html>

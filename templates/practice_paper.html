@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGCSE Chemistry Practice Paper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            body { font-size: 12pt; }
+            .question { page-break-inside: avoid; }
+        }
+        .question { margin-bottom: 25px; }
+        .paper-header { border-bottom: 2px solid #333; padding-bottom: 20px; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Controls -->
+        <div class="no-print mb-3">
+            <a href="/dashboard" class="btn btn-secondary">← Back to Dashboard</a>
+            <a href="/analysis_report" class="btn btn-outline-info">📊 View Analysis</a>
+            <button onclick="window.print()" class="btn btn-primary">🖨️ Print Paper</button>
+            <button onclick="generateNewPaper()" class="btn btn-success">🔄 Generate New Paper</button>
+        </div>
+        
+        <!-- Paper Header -->
+        <div class="paper-header text-center">
+            <h2>🧪 IGCSE Chemistry Practice Paper</h2>
+            <p><strong>Based on Weakness Analysis</strong></p>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <p><strong>Student:</strong> ________________</p>
+                </div>
+                <div class="col-md-4">
+                    <p><strong>Date:</strong> ________________</p>
+                </div>
+                <div class="col-md-4">
+                    <p><strong>Time Allowed:</strong> 45 minutes</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Instructions -->
+        <div class="alert alert-info mb-4">
+            <h6>📋 Instructions:</h6>
+            <ul class="mb-0">
+                <li>Answer ALL questions</li>
+                <li>Choose the best answer for each multiple-choice question</li>
+                <li>This paper focuses on your identified weak areas</li>
+                <li>Show all working for calculation questions</li>
+            </ul>
+        </div>
+        
+        <!-- Questions -->
+        <div id="questions-container">
+            <!-- Question 1 -->
+            <div class="question card">
+                <div class="card-body">
+                    <h5>Question 1 - Chemical Bonding</h5>
+                    <p>Which of the following statements about ionic bonding is correct?</p>
+                    <div class="ms-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="A">
+                            <label class="form-check-label">A) Electrons are shared between atoms</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="B">
+                            <label class="form-check-label">B) Electrons are transferred from metal to non-metal</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="C">
+                            <label class="form-check-label">C) Only occurs between non-metals</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="D">
+                            <label class="form-check-label">D) Results in molecules with covalent bonds</label>
+                        </div>
+                    </div>
+                    <small class="text-muted">Correct Answer: B</small>
+                </div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question card">
+                <div class="card-body">
+                    <h5>Question 2 - Reaction Kinetics</h5>
+                    <p>A reaction has a rate constant of 0.05 s⁻¹. If the initial concentration is 2.0 mol/L, what is the concentration after 20 seconds for a first-order reaction?</p>
+                    <div class="ms-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" value="A">
+                            <label class="form-check-label">A) 0.74 mol/L</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" value="B">
+                            <label class="form-check-label">B) 0.37 mol/L</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" value="C">
+                            <label class="form-check-label">C) 1.0 mol/L</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" value="D">
+                            <label class="form-check-label">D) 1.5 mol/L</label>
+                        </div>
+                    </div>
+                    <small class="text-muted">Correct Answer: A</small>
+                </div>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="question card">
+                <div class="card-body">
+                    <h5>Question 3 - Acid-Base Chemistry</h5>
+                    <p>Calculate the pH of a 0.01 M HCl solution.</p>
+                    <div class="ms-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" value="A">
+                            <label class="form-check-label">A) pH = 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" value="B">
+                            <label class="form-check-label">B) pH = 2</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" value="C">
+                            <label class="form-check-label">C) pH = 3</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" value="D">
+                            <label class="form-check-label">D) pH = 12</label>
+                        </div>
+                    </div>
+                    <small class="text-muted">Correct Answer: B</small>
+                </div>
+            </div>
+            
+            <!-- Question 4 -->
+            <div class="question card">
+                <div class="card-body">
+                    <h5>Question 4 - Balancing Equations</h5>
+                    <p>Balance the following chemical equation:</p>
+                    <p class="ms-3"><strong>__ Al + __ O₂ → __ Al₂O₃</strong></p>
+                    <div class="ms-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" value="A">
+                            <label class="form-check-label">A) 2, 3, 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" value="B">
+                            <label class="form-check-label">B) 4, 3, 2</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" value="C">
+                            <label class="form-check-label">C) 1, 1, 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" value="D">
+                            <label class="form-check-label">D) 3, 2, 1</label>
+                        </div>
+                    </div>
+                    <small class="text-muted">Correct Answer: B</small>
+                </div>
+            </div>
+            
+            <!-- Question 5 -->
+            <div class="question card">
+                <div class="card-body">
+                    <h5>Question 5 - Organic Chemistry</h5>
+                    <p>What is the IUPAC name for CH₃CH₂CH₂OH?</p>
+                    <div class="ms-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" value="A">
+                            <label class="form-check-label">A) Propanol</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" value="B">
+                            <label class="form-check-label">B) Propan-1-ol</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" value="C">
+                            <label class="form-check-label">C) Propan-2-ol</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" value="D">
+                            <label class="form-check-label">D) Propanal</label>
+                        </div>
+                    </div>
+                    <small class="text-muted">Correct Answer: B</small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Answer Sheet -->
+        <div class="card mt-4 no-print">
+            <div class="card-header">
+                <h6>📝 Quick Answer Check</h6>
+            </div>
+            <div class="card-body">
+                <p><strong>Answers:</strong> 1-B, 2-A, 3-B, 4-B, 5-B</p>
+                <button onclick="checkAnswers()" class="btn btn-success">✅ Check My Answers</button>
+                <div id="score-display" class="mt-3"></div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <hr class="mt-5">
+        <div class="text-center text-muted">
+            <p><small>End of Paper | Generated by IGCSE Chemistry Assessment Tool</small></p>
+        </div>
+    </div>
+    
+    <script>
+        function generateNewPaper() {
+            if(confirm('Generate a new practice paper with different questions?')) {
+                location.reload();
+            }
+        }
+        
+        function checkAnswers() {
+            const answers = {q1: 'B', q2: 'A', q3: 'B', q4: 'B', q5: 'B'};
+            let correct = 0;
+            let total = 5;
+            
+            for(let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if(selected && selected.value === answers[q]) {
+                    correct++;
+                }
+            }
+            
+            const percentage = Math.round((correct/total) * 100);
+            document.getElementById('score-display').innerHTML = 
+                `<div class="alert alert-info">
+                    <strong>Your Score: ${correct}/${total} (${percentage}%)</strong><br>
+                    ${percentage >= 80 ? '🎉 Excellent work!' : 
+                      percentage >= 60 ? '👍 Good effort, review weak areas.' : 
+                      '📚 More practice needed. Focus on fundamentals.'}
+                </div>`;
+        }
+    </script>
+</body>
+</html>
