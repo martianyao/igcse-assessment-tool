@@ -103,7 +103,12 @@ def analyze_student_performance(assessment_data):
         '7': 'redox_reactions',
         '8': 'organic_chemistry',
         '9': 'energy_changes',
-        '10': 'periodic_table'
+        '10': 'periodic_table',
+        '11': 'states_of_matter',
+        '12': 'separation_techniques',
+        '13': 'electrochemistry',
+        '14': 'chemical_calculations',
+        '15': 'environmental_chemistry'
     }
     
     for q_id, result in quiz_answers.items():
@@ -177,7 +182,12 @@ def identify_strengths(quiz_answers, engagement_rate):
         '7': 'Redox reactions',
         '8': 'Organic chemistry',
         '9': 'Energy changes',
-        '10': 'Periodic trends'
+        '10': 'Periodic trends',
+        '11': 'States of matter',
+        '12': 'Separation techniques',
+        '13': 'Electrochemistry',
+        '14': 'Chemical calculations',
+        '15': 'Environmental chemistry'
     }
     
     for q_id, result in quiz_answers.items():
@@ -210,7 +220,12 @@ def generate_recommendations(weak_topics, engagement_rate, score):
         'organic_chemistry': "Learn functional groups and naming conventions",
         'atomic_structure': "Review electron configuration and periodic trends",
         'energy_changes': "Practice enthalpy calculations and Hess's law",
-        'periodic_table': "Study periodic trends and element properties"
+        'periodic_table': "Study periodic trends and element properties",
+        'states_of_matter': "Review particle theory and phase changes",
+        'separation_techniques': "Practice identifying appropriate separation methods",
+        'electrochemistry': "Study electrolysis and electrode reactions",
+        'chemical_calculations': "Practice empirical formula and yield calculations",
+        'environmental_chemistry': "Review greenhouse gases and pollution effects"
     }
     
     for topic in weak_topics[:3]:  # Top 3 weak areas
@@ -231,6 +246,133 @@ def generate_recommendations(weak_topics, engagement_rate, score):
         recommendations.append("Focus on weak topics with targeted practice")
     
     return recommendations
+
+def generate_quiz_questions():
+    """Generate a comprehensive 15-question chemistry quiz"""
+    questions = [
+        {
+            'id': 1,
+            'topic': 'atomic_structure',
+            'question': 'What is the maximum number of electrons that can occupy the third electron shell?',
+            'options': ['8', '18', '32', '2'],
+            'correct': '18',
+            'explanation': 'The third shell can hold a maximum of 2n² = 2(3)² = 18 electrons.'
+        },
+        {
+            'id': 2,
+            'topic': 'chemical_bonding',
+            'question': 'Which type of bonding involves the sharing of electrons between atoms?',
+            'options': ['Ionic bonding', 'Covalent bonding', 'Metallic bonding', 'Hydrogen bonding'],
+            'correct': 'Covalent bonding',
+            'explanation': 'Covalent bonding occurs when atoms share electrons to achieve stable electron configurations.'
+        },
+        {
+            'id': 3,
+            'topic': 'stoichiometry',
+            'question': 'How many moles are in 88g of CO₂? (C=12, O=16)',
+            'options': ['1.0 mol', '2.0 mol', '3.0 mol', '4.0 mol'],
+            'correct': '2.0 mol',
+            'explanation': 'Molar mass of CO₂ = 12 + (16×2) = 44 g/mol. Number of moles = 88g ÷ 44 g/mol = 2.0 mol'
+        },
+        {
+            'id': 4,
+            'topic': 'reaction_kinetics',
+            'question': 'Which factor does NOT affect the rate of a chemical reaction?',
+            'options': ['Temperature', 'Concentration', 'Catalyst', 'Color of reactants'],
+            'correct': 'Color of reactants',
+            'explanation': 'Color is a physical property that does not affect reaction rate. Temperature, concentration, and catalysts all affect reaction rates.'
+        },
+        {
+            'id': 5,
+            'topic': 'equilibrium',
+            'question': 'In the reaction N₂ + 3H₂ ⇌ 2NH₃, what happens when pressure is increased?',
+            'options': ['Shifts left', 'Shifts right', 'No change', 'Reaction stops'],
+            'correct': 'Shifts right',
+            'explanation': 'Increasing pressure favors the side with fewer moles of gas (4 moles → 2 moles), shifting equilibrium right.'
+        },
+        {
+            'id': 6,
+            'topic': 'acids_bases',
+            'question': 'What is the pH of a 0.001 M HCl solution?',
+            'options': ['1', '2', '3', '4'],
+            'correct': '3',
+            'explanation': 'pH = -log[H⁺] = -log(0.001) = -log(10⁻³) = 3'
+        },
+        {
+            'id': 7,
+            'topic': 'redox_reactions',
+            'question': 'In a redox reaction, the substance that loses electrons is:',
+            'options': ['Reduced', 'Oxidized', 'Neutralized', 'Catalyzed'],
+            'correct': 'Oxidized',
+            'explanation': 'Oxidation is the loss of electrons. Remember: OIL RIG (Oxidation Is Loss, Reduction Is Gain)'
+        },
+        {
+            'id': 8,
+            'topic': 'organic_chemistry',
+            'question': 'What is the functional group in CH₃CH₂OH?',
+            'options': ['Alkene', 'Alcohol', 'Aldehyde', 'Carboxylic acid'],
+            'correct': 'Alcohol',
+            'explanation': 'The -OH group attached to a carbon chain indicates an alcohol functional group.'
+        },
+        {
+            'id': 9,
+            'topic': 'energy_changes',
+            'question': 'Which type of reaction releases heat to the surroundings?',
+            'options': ['Endothermic', 'Exothermic', 'Isothermic', 'Adiabatic'],
+            'correct': 'Exothermic',
+            'explanation': 'Exothermic reactions release heat energy to the surroundings, making them feel warm.'
+        },
+        {
+            'id': 10,
+            'topic': 'periodic_table',
+            'question': 'Which element is in Group 7 (halogens)?',
+            'options': ['Sodium', 'Oxygen', 'Chlorine', 'Argon'],
+            'correct': 'Chlorine',
+            'explanation': 'Chlorine is a halogen in Group 7 of the periodic table.'
+        },
+        {
+            'id': 11,
+            'topic': 'states_of_matter',
+            'question': 'Which state of matter has particles that vibrate in fixed positions?',
+            'options': ['Solid', 'Liquid', 'Gas', 'Plasma'],
+            'correct': 'Solid',
+            'explanation': 'In solids, particles are closely packed and vibrate in fixed positions.'
+        },
+        {
+            'id': 12,
+            'topic': 'separation_techniques',
+            'question': 'Which technique is best for separating salt from seawater?',
+            'options': ['Filtration', 'Distillation', 'Chromatography', 'Magnetism'],
+            'correct': 'Distillation',
+            'explanation': 'Distillation separates substances based on different boiling points, perfect for salt and water.'
+        },
+        {
+            'id': 13,
+            'topic': 'electrochemistry',
+            'question': 'At which electrode does reduction occur in electrolysis?',
+            'options': ['Anode', 'Cathode', 'Both', 'Neither'],
+            'correct': 'Cathode',
+            'explanation': 'Reduction (gain of electrons) always occurs at the cathode in electrolysis.'
+        },
+        {
+            'id': 14,
+            'topic': 'chemical_calculations',
+            'question': 'What is the empirical formula of a compound with 40% carbon, 6.7% hydrogen, and 53.3% oxygen by mass?',
+            'options': ['CHO', 'CH₂O', 'C₂H₄O', 'CH₃O'],
+            'correct': 'CH₂O',
+            'explanation': 'Converting percentages to moles gives a 1:2:1 ratio of C:H:O, giving empirical formula CH₂O.'
+        },
+        {
+            'id': 15,
+            'topic': 'environmental_chemistry',
+            'question': 'Which gas is the main contributor to acid rain?',
+            'options': ['CO₂', 'SO₂', 'N₂', 'O₂'],
+            'correct': 'SO₂',
+            'explanation': 'Sulfur dioxide (SO₂) reacts with water in the atmosphere to form sulfuric acid, causing acid rain.'
+        }
+    ]
+    
+    return questions
 
 def generate_personalized_questions(weak_topics, num_questions=10):
     """Generate personalized practice questions based on weak areas"""
@@ -376,6 +518,76 @@ def generate_personalized_questions(weak_topics, num_questions=10):
                 'correct': 'D',
                 'explanation': 'Atomic radius increases down a group due to more electron shells.'
             }
+        ],
+        'states_of_matter': [
+            {
+                'question': 'In which state do particles have the most kinetic energy?',
+                'options': ['A) Solid', 'B) Liquid', 'C) Gas', 'D) All equal'],
+                'correct': 'C',
+                'explanation': 'Gas particles move fastest and have the highest kinetic energy.'
+            },
+            {
+                'question': 'What happens during sublimation?',
+                'options': ['A) Solid to liquid', 'B) Liquid to gas', 'C) Solid to gas', 'D) Gas to liquid'],
+                'correct': 'C',
+                'explanation': 'Sublimation is the direct transition from solid to gas.'
+            }
+        ],
+        'separation_techniques': [
+            {
+                'question': 'Which method separates based on different boiling points?',
+                'options': ['A) Filtration', 'B) Distillation', 'C) Chromatography', 'D) Crystallization'],
+                'correct': 'B',
+                'explanation': 'Distillation separates liquids with different boiling points.'
+            },
+            {
+                'question': 'What technique separates insoluble solids from liquids?',
+                'options': ['A) Filtration', 'B) Evaporation', 'C) Distillation', 'D) Chromatography'],
+                'correct': 'A',
+                'explanation': 'Filtration uses a barrier to separate insoluble solids from liquids.'
+            }
+        ],
+        'electrochemistry': [
+            {
+                'question': 'During electrolysis, positive ions move to the:',
+                'options': ['A) Anode', 'B) Cathode', 'C) Both', 'D) Neither'],
+                'correct': 'B',
+                'explanation': 'Positive ions (cations) are attracted to the negative cathode.'
+            },
+            {
+                'question': 'What happens at the anode during electrolysis?',
+                'options': ['A) Reduction', 'B) Oxidation', 'C) Neutralization', 'D) Condensation'],
+                'correct': 'B',
+                'explanation': 'Oxidation (loss of electrons) occurs at the anode.'
+            }
+        ],
+        'chemical_calculations': [
+            {
+                'question': 'What is the percentage yield if 20g product is obtained from theoretical 25g?',
+                'options': ['A) 60%', 'B) 70%', 'C) 80%', 'D) 90%'],
+                'correct': 'C',
+                'explanation': 'Percentage yield = (actual/theoretical) × 100 = (20/25) × 100 = 80%'
+            },
+            {
+                'question': 'How many atoms are in 2 moles of helium?',
+                'options': ['A) 6.02 × 10²³', 'B) 1.20 × 10²⁴', 'C) 3.01 × 10²³', 'D) 2.41 × 10²⁴'],
+                'correct': 'B',
+                'explanation': '2 moles × 6.02 × 10²³ atoms/mol = 1.20 × 10²⁴ atoms'
+            }
+        ],
+        'environmental_chemistry': [
+            {
+                'question': 'Which gas is the main greenhouse gas from human activities?',
+                'options': ['A) O₂', 'B) N₂', 'C) CO₂', 'D) H₂'],
+                'correct': 'C',
+                'explanation': 'Carbon dioxide (CO₂) is the primary greenhouse gas from burning fossil fuels.'
+            },
+            {
+                'question': 'What causes ozone layer depletion?',
+                'options': ['A) CO₂', 'B) SO₂', 'C) CFCs', 'D) CH₄'],
+                'correct': 'C',
+                'explanation': 'Chlorofluorocarbons (CFCs) break down ozone in the stratosphere.'
+            }
         ]
     }
     
@@ -389,8 +601,13 @@ def generate_personalized_questions(weak_topics, num_questions=10):
         for topic in weak_topics:
             if topic in question_bank:
                 available = question_bank[topic]
-                selected = random.sample(available, min(questions_per_topic, len(available)))
-                selected_questions.extend(selected)
+                num_to_select = min(questions_per_topic, len(available))
+                selected = random.sample(available, num_to_select)
+                # Add topic to each selected question
+                for q in selected:
+                    q_copy = q.copy()  # Make a copy to avoid modifying the original
+                    q_copy['topic'] = topic
+                    selected_questions.append(q_copy)
     
     # Fill remaining with random questions
     all_topics = list(question_bank.keys())
@@ -398,13 +615,31 @@ def generate_personalized_questions(weak_topics, num_questions=10):
         random_topic = random.choice(all_topics)
         if question_bank[random_topic]:
             question = random.choice(question_bank[random_topic])
-            if question not in selected_questions:
-                selected_questions.append(question)
+            # Check if this question is already selected
+            already_selected = False
+            for sq in selected_questions:
+                if sq.get('question') == question.get('question'):
+                    already_selected = True
+                    break
+            
+            if not already_selected:
+                q_copy = question.copy()  # Make a copy
+                q_copy['topic'] = random_topic
+                selected_questions.append(q_copy)
     
-    # Number the questions
+    # Number the questions and ensure all have topics
     for i, q in enumerate(selected_questions[:num_questions], 1):
         q['number'] = i
-        q['topic'] = random_topic  # Add topic for display
+        # If topic is not set (from weak_topics section), try to identify it
+        if 'topic' not in q:
+            # Try to identify topic based on question content
+            for topic, questions in question_bank.items():
+                if q in questions:
+                    q['topic'] = topic
+                    break
+            # If still no topic found, set a default
+            if 'topic' not in q:
+                q['topic'] = 'general_chemistry'
     
     return selected_questions[:num_questions]
 
@@ -491,6 +726,39 @@ def enhanced_input_results():
     """Day 6 comprehensive assessment interface"""
     students = Student.query.all()
     return render_template('enhanced_input_results.html', students=students)
+
+@app.route('/quiz_paper')
+@login_required
+def quiz_paper():
+    """Display the 15-question chemistry quiz"""
+    questions = generate_quiz_questions()
+    return render_template('quiz_paper.html', questions=questions)
+
+@app.route('/add_student', methods=['GET', 'POST'])
+@login_required
+def add_student():
+    """Add a new student to the database"""
+    if request.method == 'POST':
+        name = request.form.get('name')
+        student_id = request.form.get('student_id')
+        class_name = request.form.get('class_name')
+        
+        # Check if student ID already exists
+        if Student.query.filter_by(student_id=student_id).first():
+            flash('Student ID already exists!', 'error')
+        else:
+            # Add new student
+            student = Student(
+                name=name,
+                student_id=student_id,
+                class_name=class_name
+            )
+            db.session.add(student)
+            db.session.commit()
+            flash(f'Student {name} added successfully!', 'success')
+            return redirect(url_for('dashboard'))
+    
+    return render_template('add_student.html')
 
 @app.route('/api/submit_comprehensive_assessment', methods=['POST'])
 @login_required
@@ -607,9 +875,12 @@ def generate_personalized_practice(assessment_id):
 @login_required
 def quick_demo_data():
     """Provide quick demo data for testing"""
+    # Get first student if exists
+    first_student = Student.query.first()
+    
     demo_data = {
-        'student_name': 'Alice Johnson',
-        'student_id': 1,
+        'student_name': first_student.name if first_student else 'Demo Student',
+        'student_id': first_student.id if first_student else 1,
         'quiz_answers': {
             '1': 'correct',
             '2': 'incorrect',
@@ -620,7 +891,12 @@ def quick_demo_data():
             '7': 'incorrect',
             '8': 'correct',
             '9': 'correct',
-            '10': 'incorrect'
+            '10': 'incorrect',
+            '11': 'correct',
+            '12': 'correct',
+            '13': 'incorrect',
+            '14': 'correct',
+            '15': 'incorrect'
         },
         'engagement_rate': 7,
         'engagement_evidence': {
