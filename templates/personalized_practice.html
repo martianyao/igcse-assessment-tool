@@ -80,11 +80,7 @@
             {% for question in questions %}
             <div class="question-card card position-relative" data-question="{{ question.number }}">
                 <span class="topic-badge badge bg-secondary">
-                    {% if question.topic %}
-                    {{ question.topic|replace('_', ' ')|title }}
-                    {% else %}
-                    Chemistry
-                    {% endif %}
+                    {{ question.topic|default('Chemistry')|replace('_', ' ')|title }}
                 </span>
                 <div class="card-body">
                     <h5 class="card-title">Question {{ question.number }}</h5>
@@ -105,11 +101,11 @@
 
                     <div class="mt-3">
                         <button type="button" class="btn btn-sm btn-outline-primary"
-                            onclick="checkAnswer({{ question.number }})">
+                            onclick="checkAnswer('{{ question.number }}')">
                             Check Answer
                         </button>
                         <button type="button" class="btn btn-sm btn-outline-info"
-                            onclick="showExplanation({{ question.number }})">
+                            onclick="showExplanation('{{ question.number }}')">
                             Show Explanation
                         </button>
                     </div>
@@ -195,39 +191,38 @@
 
         function submitPractice() {
             let correct = 0;
-            const total = {{ questions| length
-        }};
+            const total = Number('{{ questions|length }}');
 
-        // Calculate score
-        for (let i = 1; i <= total; i++) {
-            const selected = document.querySelector(`input[name="q${i}"]:checked`);
-            if (selected && selected.value === selected.dataset.correct) {
-                correct++;
+            // Calculate score
+            for (let i = 1; i <= total; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === selected.dataset.correct) {
+                    correct++;
+                }
             }
-        }
 
-        const percentage = Math.round((correct / total) * 100);
+            const percentage = Math.round((correct / total) * 100);
 
-        // Display results
-        document.getElementById('scoreDisplay').textContent = percentage + '%';
-        document.getElementById('scoreText').textContent = `${correct}/${total} Correct`;
+            // Display results
+            document.getElementById('scoreDisplay').textContent = percentage + '%';
+            document.getElementById('scoreText').textContent = `${correct}/${total} Correct`;
 
-        // Set message based on score
-        const messageEl = document.getElementById('scoreMessage');
-        if (percentage >= 80) {
-            messageEl.className = 'alert alert-success';
-            messageEl.textContent = '🌟 Excellent! You\'ve shown great improvement!';
-        } else if (percentage >= 60) {
-            messageEl.className = 'alert alert-info';
-            messageEl.textContent = '👍 Good effort! Keep practicing.';
-        } else {
-            messageEl.className = 'alert alert-warning';
-            messageEl.textContent = '📚 More practice needed. Review the explanations.';
-        }
+            // Set message based on score
+            const messageEl = document.getElementById('scoreMessage');
+            if (percentage >= 80) {
+                messageEl.className = 'alert alert-success';
+                messageEl.textContent = '🌟 Excellent! You\'ve shown great improvement!';
+            } else if (percentage >= 60) {
+                messageEl.className = 'alert alert-info';
+                messageEl.textContent = '👍 Good effort! Keep practicing.';
+            } else {
+                messageEl.className = 'alert alert-warning';
+                messageEl.textContent = '📚 More practice needed. Review the explanations.';
+            }
 
-        // Show modal
-        const modal = new bootstrap.Modal(document.getElementById('resultsModal'));
-        modal.show();
+            // Show modal
+            const modal = new bootstrap.Modal(document.getElementById('resultsModal'));
+            modal.show();
         }
     </script>
 </body>
