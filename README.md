@@ -39,29 +39,6 @@ Student Assessment → Weakness Diagnosis → Topic Mapping → Paper Generation
 | **Future: Vector Database** | ChromaDB/Pinecone + Embeddings | Semantic question search and retrieval |
 
 ---
-## **Content Sources**
-
-1. **IGCSE Chemistry Specification (0620)**
-   - Source: Cambridge Assessment International Education
-   - Usage: Topic mapping and curriculum alignment
-   - License: Educational reference under fair use
-
-2. **Generated Assessment Items**
-   - Source: AI-generated content based on specification
-   - Usage: Demonstration and testing purposes
-   - License: Open source (MIT) - see LICENSE file
-
-3. **Sample Questions and Solutions**
-   - Source: Original content created for this project
-   - Usage: Educational demonstrations
-   - License: Open source (MIT) - see LICENSE file
-
-4. **Student information**
-   - All information pertaining to the student is false and has been fabricated
-
-### **Pseudo-Question Generation**
-
-To avoid copyright concerns, this tool primarily uses:
 
 ## 🎯 **Key Features**
 
@@ -315,21 +292,16 @@ pytest tests/performance/ -v           # Load testing
 - ✅ AI-powered question generation and feedback
 
 ### **Future Enhancements (v2.0)**
-- 🔄 **Generative AI Integration**: Google Gemini API integration for enhanced analysis capabilities
-  - Advanced natural language generation for personalized feedback
-  - Intelligent question explanation and hint systems
-  - Multi-modal content analysis (text, diagrams, chemical equations)
-- 🔄 **Vector Database Implementation**: Local vector database for massive question bank management
-  - Semantic similarity search for question recommendation
-  - RAG (Retrieval-Augmented Generation) for contextual question generation
-  - Embedding-based topic clustering and difficulty calibration
-- 🔄 **Real-time Adaptive Testing**: Dynamic difficulty adjustment algorithms
-- 🔄 **Enhanced Content Diversity**: AI-powered question variety expansion
-  - Automatic question paraphrasing and variation generation
-  - Cross-topic question synthesis for comprehensive assessment
-  - Historical exam pattern analysis for predictive question creation
-- 🔄 **School System Integration**: API connections to major educational platforms (SIMS, Schoology, Google Classroom)
-- 🔄 **Mobile Application**: Student self-assessment and progress tracking app
+
+**1.** We plan to develop a locally-deployed adaptive learning platform utilizing transformer-based LLMs (70B+ parameters) with INT4/INT8 quantization, deployed via vLLM inference engine on high-memory GPUs, featuring RESTful APIs for web and mobile client integration with real-time WebSocket connections.
+
+**2.** The system will implement a multi-agent architecture with specialized components (Tutor, Planner, Judge, Report, Guard agents) orchestrated through MCP event buses, utilizing dynamic LoRA adapter switching for pedagogical strategy routing (cognitive/constructivist/behaviorist) based on student profiling algorithms and question complexity scoring.
+
+**3.** Advanced behavioral analytics will employ computer vision for handwritten work analysis, NLP-based submission pattern detection, and temporal sequence modeling to assess learning authenticity, integrated with Redis-based memory stores for persistent student interaction tracking and contextual response generation.
+
+**4.** A comprehensive knowledge graph will map curriculum standards to question taxonomies using vector embeddings (sentence-transformers), implementing five-dimensional difficulty metrics computed through automated feature extraction, enabling graph-based learning path optimization with reinforcement learning for adaptive content sequencing.
+
+**5.** The architecture will feature teacher persona modeling through parameter-efficient fine-tuning (LoRA rank-32 adapters), containerized deployment with Docker/Kubernetes for scalability, and integration of RAG systems with Pinecone/FAISS vector databases for domain-specific knowledge retrieval and personalized content generation.​​​​​​​​​​​​​​​​
 
 
 
